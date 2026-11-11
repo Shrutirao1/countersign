@@ -1,0 +1,14 @@
+# Secrets: never commit your keys
+.env
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Your local demo data (receipts, case law, cache, call log)
+data/
+
+.DS_Store
