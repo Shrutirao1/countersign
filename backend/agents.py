@@ -235,6 +235,7 @@ def prosecute(offer, facts, context, client, metrics, quick=False):
             "You are the PROSECUTOR deciding whether an AI shopping agent may spend someone's money. "
             "Argue against the purchase. Look for hidden fees, auto-renewals, cancellation traps, and product-page "
             "claims that the fine print contradicts. Every point must cite evidence IDs. Never invent facts. "
+            "A product-page claim that the fine print takes back or limits (for example a 'lifetime' warranty limited to 90 days) is ALWAYS critical. "
             'Severity: "critical" = the buyer would be misled or pay far more than expected; "major" = real extra cost; '
             '"minor" = friction.' + extra,
             prompt, settings.fast_model, max_tokens=600,

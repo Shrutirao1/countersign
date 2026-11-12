@@ -4,6 +4,7 @@
 
 | Configuration | Split | Offers x repeats | Accuracy | Traps approved | Good offers blocked | Field accuracy | Fallback rate | Median s | Slowest 5% s | AI calls / offer | Cost / offer |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| mixed | dev | 20 x 1 | 100% | 0 | 0 | 96% | 0% | 3.50 | 10.15 | 1.9 | $0.0016 |
 | offline | dev | 20 x 1 | 75% | 4 | 1 | 91% | n/a | 0.00 | 0.00 | 0.0 | $0.0000 |
 | offline | test | 20 x 1 | 80% | 3 | 1 | 94% | n/a | 0.00 | 0.00 | 0.0 | $0.0000 |
 
