@@ -1,53 +1,53 @@
 {
   "config": "mixed",
   "split": "dev",
-  "repeats": 1,
+  "repeats": 3,
   "aiMode": "live",
   "models": {
     "fast": "claude-haiku-5-5",
     "judge": "claude-sonnet-5-5"
   },
-  "createdAt": "2026-11-12T15:23:05.252379+00:00",
+  "createdAt": "2026-11-12T16:51:24.579861+00:00",
   "summary": {
     "offers": 20,
-    "runs": 20,
+    "runs": 60,
     "accuracy": 1.0,
     "falseApprovals": [],
     "falseRejections": [],
-    "fieldAccuracy": 0.9625,
+    "fieldAccuracy": 0.9875,
     "droppedCitations": 0,
-    "aiCalls": 38,
+    "aiCalls": 114,
     "fallbackRate": 0.0,
-    "medianSeconds": 3.4285,
-    "p95Seconds": 11.569,
+    "medianSeconds": 3.892,
+    "p95Seconds": 11.977,
     "avgAiCalls": 1.9,
-    "avgCost": 0.00161315,
-    "avgInputTokens": 987.7,
-    "consistency": null,
+    "avgCost": 0.0016477,
+    "avgInputTokens": 992.1333333333333,
+    "consistency": 1.0,
     "byGroup": {
       "clean": {
-        "runs": 5,
-        "correct": 5
+        "runs": 15,
+        "correct": 15
       },
       "sub_trap": {
-        "runs": 4,
-        "correct": 4
+        "runs": 12,
+        "correct": 12
       },
       "hidden_fee": {
-        "runs": 3,
-        "correct": 3
+        "runs": 9,
+        "correct": 9
       },
       "returns": {
-        "runs": 3,
-        "correct": 3
+        "runs": 9,
+        "correct": 9
       },
       "gray": {
-        "runs": 3,
-        "correct": 3
+        "runs": 9,
+        "correct": 9
       },
       "safe_words": {
-        "runs": 2,
-        "correct": 2
+        "runs": 6,
+        "correct": 6
       }
     },
     "bars": [
@@ -65,7 +65,7 @@
       },
       {
         "metric": "Field accuracy",
-        "value": 0.963,
+        "value": 0.988,
         "bar": "90% or better",
         "passed": true
       },
@@ -77,15 +77,15 @@
       },
       {
         "metric": "Median seconds",
-        "value": 3.429,
+        "value": 3.892,
         "bar": "under 10 s",
         "passed": true
       },
       {
         "metric": "Consistency",
-        "value": null,
+        "value": 1.0,
         "bar": "95% or better",
-        "passed": null
+        "passed": true
       }
     ],
     "safetyNetCatches": 0
@@ -113,12 +113,76 @@
         "returnCost": 0.0,
         "hiddenFees": 0.0
       },
-      "seconds": 6.741,
+      "seconds": 5.031,
       "aiCalls": 2,
       "fallbacks": 0,
       "inputTokens": 904,
-      "outputTokens": 809,
-      "cost": 0.000495,
+      "outputTokens": 579,
+      "cost": 0.00038,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Honest one-time price, free returns"
+    },
+    {
+      "id": "c01",
+      "group": "clean",
+      "title": "Digital kitchen scale",
+      "expected": "APPROVE",
+      "got": "APPROVE",
+      "correct": true,
+      "decidedBy": "quick check",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 24.99,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 5.038,
+      "aiCalls": 2,
+      "fallbacks": 0,
+      "inputTokens": 904,
+      "outputTokens": 838,
+      "cost": 0.000509,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Honest one-time price, free returns"
+    },
+    {
+      "id": "c01",
+      "group": "clean",
+      "title": "Digital kitchen scale",
+      "expected": "APPROVE",
+      "got": "APPROVE",
+      "correct": true,
+      "decidedBy": "quick check",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 24.99,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 4.448,
+      "aiCalls": 2,
+      "fallbacks": 0,
+      "inputTokens": 904,
+      "outputTokens": 655,
+      "cost": 0.000418,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Honest one-time price, free returns"
@@ -145,12 +209,76 @@
         "returnCost": 0.0,
         "hiddenFees": 0.0
       },
-      "seconds": 6.863,
+      "seconds": 7.096,
       "aiCalls": 2,
       "fallbacks": 0,
       "inputTokens": 930,
-      "outputTokens": 671,
-      "cost": 0.000428,
+      "outputTokens": 801,
+      "cost": 0.000494,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Free shipping, total matches"
+    },
+    {
+      "id": "c03",
+      "group": "clean",
+      "title": "LED desk lamp",
+      "expected": "APPROVE",
+      "got": "APPROVE",
+      "correct": true,
+      "decidedBy": "quick check",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 36.0,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 6.14,
+      "aiCalls": 2,
+      "fallbacks": 0,
+      "inputTokens": 930,
+      "outputTokens": 694,
+      "cost": 0.00044,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Free shipping, total matches"
+    },
+    {
+      "id": "c03",
+      "group": "clean",
+      "title": "LED desk lamp",
+      "expected": "APPROVE",
+      "got": "APPROVE",
+      "correct": true,
+      "decidedBy": "quick check",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 36.0,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 6.036,
+      "aiCalls": 2,
+      "fallbacks": 0,
+      "inputTokens": 930,
+      "outputTokens": 827,
+      "cost": 0.000507,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Free shipping, total matches"
@@ -177,12 +305,76 @@
         "returnCost": 0.0,
         "hiddenFees": 0.0
       },
-      "seconds": 4.134,
+      "seconds": 5.761,
       "aiCalls": 2,
       "fallbacks": 0,
       "inputTokens": 917,
-      "outputTokens": 525,
-      "cost": 0.000354,
+      "outputTokens": 759,
+      "cost": 0.000471,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Honest one-time price"
+    },
+    {
+      "id": "c05",
+      "group": "clean",
+      "title": "Thermos bottle 2-pack",
+      "expected": "APPROVE",
+      "got": "APPROVE",
+      "correct": true,
+      "decidedBy": "quick check",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 27.8,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 4.004,
+      "aiCalls": 2,
+      "fallbacks": 0,
+      "inputTokens": 917,
+      "outputTokens": 503,
+      "cost": 0.000343,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Honest one-time price"
+    },
+    {
+      "id": "c05",
+      "group": "clean",
+      "title": "Thermos bottle 2-pack",
+      "expected": "APPROVE",
+      "got": "APPROVE",
+      "correct": true,
+      "decidedBy": "quick check",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 27.8,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 2.893,
+      "aiCalls": 2,
+      "fallbacks": 0,
+      "inputTokens": 917,
+      "outputTokens": 383,
+      "cost": 0.000283,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Honest one-time price"
@@ -209,12 +401,76 @@
         "returnCost": 0.0,
         "hiddenFees": 0.0
       },
-      "seconds": 4.24,
+      "seconds": 4.551,
       "aiCalls": 2,
       "fallbacks": 0,
       "inputTokens": 914,
-      "outputTokens": 678,
-      "cost": 0.00043,
+      "outputTokens": 629,
+      "cost": 0.000406,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Returns are free, worded differently"
+    },
+    {
+      "id": "c07",
+      "group": "clean",
+      "title": "Reading glasses 3-pack",
+      "expected": "APPROVE",
+      "got": "APPROVE",
+      "correct": true,
+      "decidedBy": "quick check",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 18.0,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 6.036,
+      "aiCalls": 2,
+      "fallbacks": 0,
+      "inputTokens": 914,
+      "outputTokens": 851,
+      "cost": 0.000517,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Returns are free, worded differently"
+    },
+    {
+      "id": "c07",
+      "group": "clean",
+      "title": "Reading glasses 3-pack",
+      "expected": "APPROVE",
+      "got": "APPROVE",
+      "correct": true,
+      "decidedBy": "quick check",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 18.0,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 5.011,
+      "aiCalls": 2,
+      "fallbacks": 0,
+      "inputTokens": 914,
+      "outputTokens": 662,
+      "cost": 0.000422,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Returns are free, worded differently"
@@ -241,12 +497,76 @@
         "returnCost": 0.0,
         "hiddenFees": 0.0
       },
-      "seconds": 6.637,
+      "seconds": 4.0,
       "aiCalls": 2,
       "fallbacks": 0,
       "inputTokens": 959,
-      "outputTokens": 776,
+      "outputTokens": 556,
+      "cost": 0.000374,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Accessories sold separately is not a hidden charge"
+    },
+    {
+      "id": "c09",
+      "group": "clean",
+      "title": "Electric toothbrush",
+      "expected": "APPROVE",
+      "got": "APPROVE",
+      "correct": true,
+      "decidedBy": "quick check",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 39.95,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 5.118,
+      "aiCalls": 2,
+      "fallbacks": 0,
+      "inputTokens": 959,
+      "outputTokens": 777,
       "cost": 0.000484,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Accessories sold separately is not a hidden charge"
+    },
+    {
+      "id": "c09",
+      "group": "clean",
+      "title": "Electric toothbrush",
+      "expected": "APPROVE",
+      "got": "APPROVE",
+      "correct": true,
+      "decidedBy": "quick check",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 39.95,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 4.221,
+      "aiCalls": 2,
+      "fallbacks": 0,
+      "inputTokens": 959,
+      "outputTokens": 586,
+      "cost": 0.000389,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Accessories sold separately is not a hidden charge"
@@ -276,12 +596,82 @@
         "returnCost": 0.0,
         "hiddenFees": 0.0
       },
-      "seconds": 2.225,
+      "seconds": 2.388,
       "aiCalls": 1,
       "fallbacks": 0,
       "inputTokens": 371,
-      "outputTokens": 412,
-      "cost": 0.000243,
+      "outputTokens": 396,
+      "cost": 0.000235,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Billed monthly after a trial"
+    },
+    {
+      "id": "s01",
+      "group": "sub_trap",
+      "title": "Smart scale with app",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 9.99,
+        "recurring": {
+          "amount": 14.99,
+          "interval": "month"
+        },
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 3.018,
+      "aiCalls": 1,
+      "fallbacks": 0,
+      "inputTokens": 371,
+      "outputTokens": 618,
+      "cost": 0.000346,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Billed monthly after a trial"
+    },
+    {
+      "id": "s01",
+      "group": "sub_trap",
+      "title": "Smart scale with app",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 9.99,
+        "recurring": {
+          "amount": 14.99,
+          "interval": "month"
+        },
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 2.149,
+      "aiCalls": 1,
+      "fallbacks": 0,
+      "inputTokens": 371,
+      "outputTokens": 398,
+      "cost": 0.000236,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Billed monthly after a trial"
@@ -311,12 +701,82 @@
         "returnCost": 0.0,
         "hiddenFees": 12.0
       },
-      "seconds": 3.373,
+      "seconds": 3.893,
       "aiCalls": 1,
       "fallbacks": 0,
       "inputTokens": 366,
-      "outputTokens": 607,
-      "cost": 0.00034,
+      "outputTokens": 680,
+      "cost": 0.000377,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Auto-renewing coaching plan"
+    },
+    {
+      "id": "s03",
+      "group": "sub_trap",
+      "title": "Fitness tracker",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "high",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 19.0,
+        "recurring": {
+          "amount": 12.0,
+          "interval": "month"
+        },
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 5.045,
+      "aiCalls": 1,
+      "fallbacks": 0,
+      "inputTokens": 366,
+      "outputTokens": 635,
+      "cost": 0.000354,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Auto-renewing coaching plan"
+    },
+    {
+      "id": "s03",
+      "group": "sub_trap",
+      "title": "Fitness tracker",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "high",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 19.0,
+        "recurring": {
+          "amount": 12.0,
+          "interval": "month"
+        },
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 3.561,
+      "aiCalls": 1,
+      "fallbacks": 0,
+      "inputTokens": 366,
+      "outputTokens": 674,
+      "cost": 0.000374,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Auto-renewing coaching plan"
@@ -346,15 +806,155 @@
         "returnCost": 0.0,
         "hiddenFees": 0.0
       },
-      "seconds": 2.33,
+      "seconds": 3.068,
       "aiCalls": 1,
       "fallbacks": 0,
       "inputTokens": 369,
-      "outputTokens": 436,
-      "cost": 0.000255,
+      "outputTokens": 556,
+      "cost": 0.000315,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Yearly auto-renewal"
+    },
+    {
+      "id": "s05",
+      "group": "sub_trap",
+      "title": "Photo storage drive",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "high",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 29.99,
+        "recurring": {
+          "amount": 99.0,
+          "interval": "year"
+        },
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 3.54,
+      "aiCalls": 1,
+      "fallbacks": 0,
+      "inputTokens": 369,
+      "outputTokens": 676,
+      "cost": 0.000375,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Yearly auto-renewal"
+    },
+    {
+      "id": "s05",
+      "group": "sub_trap",
+      "title": "Photo storage drive",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "high",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 29.99,
+        "recurring": {
+          "amount": 99.0,
+          "interval": "year"
+        },
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 3.013,
+      "aiCalls": 1,
+      "fallbacks": 0,
+      "inputTokens": 369,
+      "outputTokens": 496,
+      "cost": 0.000285,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Yearly auto-renewal"
+    },
+    {
+      "id": "s07",
+      "group": "sub_trap",
+      "title": "Razor starter kit",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 3.0,
+        "recurring": {
+          "amount": 18.5,
+          "interval": "month"
+        },
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 2.458,
+      "aiCalls": 1,
+      "fallbacks": 0,
+      "inputTokens": 359,
+      "outputTokens": 436,
+      "cost": 0.000254,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Automatic monthly refills"
+    },
+    {
+      "id": "s07",
+      "group": "sub_trap",
+      "title": "Razor starter kit",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 3.0,
+        "recurring": {
+          "amount": 18.5,
+          "interval": "month"
+        },
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 2.602,
+      "aiCalls": 1,
+      "fallbacks": 0,
+      "inputTokens": 359,
+      "outputTokens": 485,
+      "cost": 0.000278,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Automatic monthly refills"
     },
     {
       "id": "s07",
@@ -381,12 +981,12 @@
         "returnCost": 0.0,
         "hiddenFees": 18.5
       },
-      "seconds": 2.8,
+      "seconds": 4.168,
       "aiCalls": 1,
       "fallbacks": 0,
       "inputTokens": 359,
-      "outputTokens": 551,
-      "cost": 0.000311,
+      "outputTokens": 749,
+      "cost": 0.00041,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Automatic monthly refills"
@@ -413,12 +1013,76 @@
         "returnCost": 0.0,
         "hiddenFees": 15.0
       },
-      "seconds": 1.918,
+      "seconds": 1.729,
       "aiCalls": 1,
       "fallbacks": 0,
       "inputTokens": 346,
-      "outputTokens": 286,
-      "cost": 0.000178,
+      "outputTokens": 267,
+      "cost": 0.000168,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Assembly fee added at checkout"
+    },
+    {
+      "id": "h01",
+      "group": "hidden_fee",
+      "title": "Office chair",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 94.0,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 15.0
+      },
+      "seconds": 2.866,
+      "aiCalls": 1,
+      "fallbacks": 0,
+      "inputTokens": 346,
+      "outputTokens": 317,
+      "cost": 0.000193,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Assembly fee added at checkout"
+    },
+    {
+      "id": "h01",
+      "group": "hidden_fee",
+      "title": "Office chair",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 94.0,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 15.0
+      },
+      "seconds": 1.65,
+      "aiCalls": 1,
+      "fallbacks": 0,
+      "inputTokens": 346,
+      "outputTokens": 253,
+      "cost": 0.000161,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Assembly fee added at checkout"
@@ -445,12 +1109,76 @@
         "returnCost": 0.0,
         "hiddenFees": 9.95
       },
-      "seconds": 1.471,
+      "seconds": 1.941,
       "aiCalls": 1,
       "fallbacks": 0,
       "inputTokens": 349,
-      "outputTokens": 251,
-      "cost": 0.00016,
+      "outputTokens": 266,
+      "cost": 0.000168,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Shipping and handling added at checkout"
+    },
+    {
+      "id": "h03",
+      "group": "hidden_fee",
+      "title": "Running shoes",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 73.95,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 9.95
+      },
+      "seconds": 1.625,
+      "aiCalls": 1,
+      "fallbacks": 0,
+      "inputTokens": 349,
+      "outputTokens": 217,
+      "cost": 0.000143,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Shipping and handling added at checkout"
+    },
+    {
+      "id": "h03",
+      "group": "hidden_fee",
+      "title": "Running shoes",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 73.95,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 9.95
+      },
+      "seconds": 1.835,
+      "aiCalls": 1,
+      "fallbacks": 0,
+      "inputTokens": 349,
+      "outputTokens": 274,
+      "cost": 0.000172,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Shipping and handling added at checkout"
@@ -477,12 +1205,76 @@
         "returnCost": 0.0,
         "hiddenFees": 4.99
       },
-      "seconds": 1.702,
+      "seconds": 1.781,
       "aiCalls": 1,
       "fallbacks": 0,
       "inputTokens": 348,
-      "outputTokens": 271,
-      "cost": 0.00017,
+      "outputTokens": 299,
+      "cost": 0.000184,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Small-order fee"
+    },
+    {
+      "id": "h05",
+      "group": "hidden_fee",
+      "title": "Desk organizer",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 19.99,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 4.99
+      },
+      "seconds": 1.781,
+      "aiCalls": 1,
+      "fallbacks": 0,
+      "inputTokens": 348,
+      "outputTokens": 233,
+      "cost": 0.000151,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Small-order fee"
+    },
+    {
+      "id": "h05",
+      "group": "hidden_fee",
+      "title": "Desk organizer",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 19.99,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 4.99
+      },
+      "seconds": 1.878,
+      "aiCalls": 1,
+      "fallbacks": 0,
+      "inputTokens": 348,
+      "outputTokens": 305,
+      "cost": 0.000187,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Small-order fee"
@@ -509,12 +1301,76 @@
         "returnCost": 26.8,
         "hiddenFees": 26.8
       },
-      "seconds": 2.938,
+      "seconds": 3.153,
       "aiCalls": 1,
       "fallbacks": 0,
       "inputTokens": 361,
-      "outputTokens": 575,
+      "outputTokens": 576,
       "cost": 0.000324,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "'Free returns' but $26.80 to return"
+    },
+    {
+      "id": "r01",
+      "group": "returns",
+      "title": "Robot vacuum",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "high",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 89.0,
+        "recurring": null,
+        "returnCost": 26.8,
+        "hiddenFees": 0.0
+      },
+      "seconds": 3.711,
+      "aiCalls": 1,
+      "fallbacks": 0,
+      "inputTokens": 361,
+      "outputTokens": 646,
+      "cost": 0.000359,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "'Free returns' but $26.80 to return"
+    },
+    {
+      "id": "r01",
+      "group": "returns",
+      "title": "Robot vacuum",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "high",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 89.0,
+        "recurring": null,
+        "returnCost": 26.8,
+        "hiddenFees": 0.0
+      },
+      "seconds": 3.183,
+      "aiCalls": 1,
+      "fallbacks": 0,
+      "inputTokens": 361,
+      "outputTokens": 567,
+      "cost": 0.00032,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "'Free returns' but $26.80 to return"
@@ -541,12 +1397,76 @@
         "returnCost": 14.25,
         "hiddenFees": 0.0
       },
-      "seconds": 3.226,
+      "seconds": 4.014,
       "aiCalls": 1,
       "fallbacks": 0,
       "inputTokens": 352,
-      "outputTokens": 660,
-      "cost": 0.000365,
+      "outputTokens": 637,
+      "cost": 0.000354,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "15% restocking fee"
+    },
+    {
+      "id": "r03",
+      "group": "returns",
+      "title": "Smart watch",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "high",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 95.0,
+        "recurring": null,
+        "returnCost": 14.25,
+        "hiddenFees": 0.0
+      },
+      "seconds": 2.836,
+      "aiCalls": 1,
+      "fallbacks": 0,
+      "inputTokens": 352,
+      "outputTokens": 541,
+      "cost": 0.000306,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "15% restocking fee"
+    },
+    {
+      "id": "r03",
+      "group": "returns",
+      "title": "Smart watch",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "high",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 95.0,
+        "recurring": null,
+        "returnCost": 14.25,
+        "hiddenFees": 0.0
+      },
+      "seconds": 3.891,
+      "aiCalls": 1,
+      "fallbacks": 0,
+      "inputTokens": 352,
+      "outputTokens": 586,
+      "cost": 0.000328,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "15% restocking fee"
@@ -573,12 +1493,76 @@
         "returnCost": 11.95,
         "hiddenFees": 0.0
       },
-      "seconds": 3.484,
+      "seconds": 2.868,
       "aiCalls": 1,
       "fallbacks": 0,
       "inputTokens": 346,
-      "outputTokens": 612,
-      "cost": 0.000341,
+      "outputTokens": 518,
+      "cost": 0.000294,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Return label deducted from refund"
+    },
+    {
+      "id": "r05",
+      "group": "returns",
+      "title": "Space heater",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 42.0,
+        "recurring": null,
+        "returnCost": 11.95,
+        "hiddenFees": 0.0
+      },
+      "seconds": 2.739,
+      "aiCalls": 1,
+      "fallbacks": 0,
+      "inputTokens": 346,
+      "outputTokens": 490,
+      "cost": 0.00028,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Return label deducted from refund"
+    },
+    {
+      "id": "r05",
+      "group": "returns",
+      "title": "Space heater",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 42.0,
+        "recurring": null,
+        "returnCost": 11.95,
+        "hiddenFees": 0.0
+      },
+      "seconds": 2.558,
+      "aiCalls": 1,
+      "fallbacks": 0,
+      "inputTokens": 346,
+      "outputTokens": 449,
+      "cost": 0.000259,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Return label deducted from refund"
@@ -605,12 +1589,76 @@
         "returnCost": 0.0,
         "hiddenFees": 0.0
       },
-      "seconds": 11.569,
+      "seconds": 13.075,
       "aiCalls": 4,
       "fallbacks": 0,
-      "inputTokens": 2620,
-      "outputTokens": 1789,
-      "cost": 0.006604,
+      "inputTokens": 2680,
+      "outputTokens": 1966,
+      "cost": 0.006423,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "'Medical-grade' claim taken back in the fine print"
+    },
+    {
+      "id": "g01",
+      "group": "gray",
+      "title": "Pulse oximeter",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "trial",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 28.0,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 12.991,
+      "aiCalls": 4,
+      "fallbacks": 0,
+      "inputTokens": 2703,
+      "outputTokens": 1917,
+      "cost": 0.007641,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "'Medical-grade' claim taken back in the fine print"
+    },
+    {
+      "id": "g01",
+      "group": "gray",
+      "title": "Pulse oximeter",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "trial",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 28.0,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 10.992,
+      "aiCalls": 4,
+      "fallbacks": 0,
+      "inputTokens": 2648,
+      "outputTokens": 1691,
+      "cost": 0.006373,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "'Medical-grade' claim taken back in the fine print"
@@ -637,12 +1685,76 @@
         "returnCost": 0.0,
         "hiddenFees": 0.0
       },
-      "seconds": 14.846,
+      "seconds": 12.763,
       "aiCalls": 4,
       "fallbacks": 0,
-      "inputTokens": 2646,
-      "outputTokens": 1859,
-      "cost": 0.006581,
+      "inputTokens": 2690,
+      "outputTokens": 1821,
+      "cost": 0.006507,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "'Lifetime warranty' is really 90 days"
+    },
+    {
+      "id": "g03",
+      "group": "gray",
+      "title": "Travel backpack",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "trial",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 48.0,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 11.813,
+      "aiCalls": 4,
+      "fallbacks": 0,
+      "inputTokens": 2559,
+      "outputTokens": 1748,
+      "cost": 0.006399,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "'Lifetime warranty' is really 90 days"
+    },
+    {
+      "id": "g03",
+      "group": "gray",
+      "title": "Travel backpack",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "trial",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 48.0,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 11.977,
+      "aiCalls": 4,
+      "fallbacks": 0,
+      "inputTokens": 2686,
+      "outputTokens": 1951,
+      "cost": 0.006621,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "'Lifetime warranty' is really 90 days"
@@ -669,12 +1781,76 @@
         "returnCost": 0.0,
         "hiddenFees": 0.0
       },
-      "seconds": 3.206,
+      "seconds": 3.788,
       "aiCalls": 2,
       "fallbacks": 0,
       "inputTokens": 941,
-      "outputTokens": 393,
-      "cost": 0.000291,
+      "outputTokens": 513,
+      "cost": 0.000351,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Claim is backed up, not taken back"
+    },
+    {
+      "id": "g05",
+      "group": "gray",
+      "title": "Organic tea sampler",
+      "expected": "APPROVE",
+      "got": "APPROVE",
+      "correct": true,
+      "decidedBy": "quick check",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 21.0,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 3.504,
+      "aiCalls": 2,
+      "fallbacks": 0,
+      "inputTokens": 941,
+      "outputTokens": 507,
+      "cost": 0.000348,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Claim is backed up, not taken back"
+    },
+    {
+      "id": "g05",
+      "group": "gray",
+      "title": "Organic tea sampler",
+      "expected": "APPROVE",
+      "got": "APPROVE",
+      "correct": true,
+      "decidedBy": "quick check",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 21.0,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 3.862,
+      "aiCalls": 2,
+      "fallbacks": 0,
+      "inputTokens": 941,
+      "outputTokens": 530,
+      "cost": 0.000359,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Claim is backed up, not taken back"
@@ -701,12 +1877,76 @@
         "returnCost": 0.0,
         "hiddenFees": 0.0
       },
-      "seconds": 8.017,
+      "seconds": 10.077,
       "aiCalls": 4,
       "fallbacks": 0,
-      "inputTokens": 2473,
-      "outputTokens": 1684,
-      "cost": 0.00671,
+      "inputTokens": 2655,
+      "outputTokens": 2063,
+      "cost": 0.007339,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Says 'subscription' but there is none"
+    },
+    {
+      "id": "x01",
+      "group": "safe_words",
+      "title": "Water filter pitcher",
+      "expected": "APPROVE",
+      "got": "APPROVE",
+      "correct": true,
+      "decidedBy": "trial",
+      "tier": "high",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 32.0,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 8.402,
+      "aiCalls": 4,
+      "fallbacks": 0,
+      "inputTokens": 2531,
+      "outputTokens": 1751,
+      "cost": 0.006602,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Says 'subscription' but there is none"
+    },
+    {
+      "id": "x01",
+      "group": "safe_words",
+      "title": "Water filter pitcher",
+      "expected": "APPROVE",
+      "got": "APPROVE",
+      "correct": true,
+      "decidedBy": "trial",
+      "tier": "high",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 32.0,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 10.838,
+      "aiCalls": 4,
+      "fallbacks": 0,
+      "inputTokens": 2658,
+      "outputTokens": 2314,
+      "cost": 0.007765,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Says 'subscription' but there is none"
@@ -733,12 +1973,76 @@
         "returnCost": 0.0,
         "hiddenFees": 0.0
       },
-      "seconds": 9.529,
+      "seconds": 10.728,
       "aiCalls": 4,
       "fallbacks": 0,
-      "inputTokens": 2883,
-      "outputTokens": 2384,
-      "cost": 0.007199,
+      "inputTokens": 2842,
+      "outputTokens": 2246,
+      "cost": 0.007077,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Optional plan, never added automatically"
+    },
+    {
+      "id": "x02",
+      "group": "safe_words",
+      "title": "Home printer",
+      "expected": "APPROVE",
+      "got": "APPROVE",
+      "correct": true,
+      "decidedBy": "trial",
+      "tier": "high",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 79.0,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 9.373,
+      "aiCalls": 4,
+      "fallbacks": 0,
+      "inputTokens": 2771,
+      "outputTokens": 2042,
+      "cost": 0.007783,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Optional plan, never added automatically"
+    },
+    {
+      "id": "x02",
+      "group": "safe_words",
+      "title": "Home printer",
+      "expected": "APPROVE",
+      "got": "APPROVE",
+      "correct": true,
+      "decidedBy": "trial",
+      "tier": "high",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 79.0,
+        "recurring": null,
+        "returnCost": 0.0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 10.987,
+      "aiCalls": 4,
+      "fallbacks": 0,
+      "inputTokens": 2709,
+      "outputTokens": 1861,
+      "cost": 0.006647,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Optional plan, never added automatically"
