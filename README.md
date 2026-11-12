@@ -41,15 +41,15 @@ Counterfactual (what a naive agent would pay) + metrics + hash-chained receipt
 
 ### Speed and cost: old design vs new design
 
-Measured with `python -m evals.benchmark` (mock AI, 0.4 s per call; run `--live` for real seconds). Same verdicts in both designs.
+Measured with `python -m evals.benchmark --live` (real AI calls). Same verdicts in both designs.
 
 | Scenario | Run | Old: AI calls | Old: seconds | New: AI calls | New: seconds |
 |---|---|---|---|---|---|
-| Dad's blood pressure monitor | first | 14 | 5.6 | 6 | 1.6 |
-| Dad's blood pressure monitor | repeat (cache) | 14 | 5.6 | 3 | 1.2 |
-| Reorder AA batteries | first | 1 | 0.4 | 0 | 0.0 |
-| Cheap dinner delivery | first | 10 | 4.0 | 2 | 0.4 |
-| Cheap dinner delivery | repeat (cache) | 10 | 4.0 | 0 | 0.0 |
+| Dad's blood pressure monitor | first | 14 | 46.2 | 6 | 19.9 |
+| Dad's blood pressure monitor | repeat (cache) | 14 | 45.6 | 3 | 13.1 |
+| Reorder AA batteries | first | 1 | 3.3 | 0 | 0.0 |
+| Cheap dinner delivery | first | 10 | 32.3 | 2 | 3.0 |
+| Cheap dinner delivery | repeat (cache) | 10 | 27.0 | 0 | 0.0 |
 
 ### Accuracy: 40 labeled offers
 
@@ -59,8 +59,9 @@ Measured with `python -m evals.benchmark` (mock AI, 0.4 s per call; run `--live`
 |---|---|---|---|---|---|
 | Offline analyzer (no AI, baseline) | dev | 75% | 4 | 1 | 91% |
 | Offline analyzer (no AI, baseline) | test | 80% | 3 | 1 | 94% |
-| AI, mixed models | dev | *run with your key* | | | |
-| AI, mixed models | test | *run once after the freeze* | | | |
+| AI, mixed models | dev (20 × 3) | 100% | 0 | 0 | 99% |
+| AI, mixed models | test, run 1 (20 × 3) | 95% | 1 | 0 | 99.6% |
+| AI, mixed models | test, run 2 (20 × 3) | 100% | 0 | 0 | 98% |
 
 With perfect fine-print reading, the decision logic scores 100% on all 40 offers (0 traps approved, 0 good offers blocked), so accuracy depends only on how well the AI reads. The baseline misses reworded subscription traps ("billed $14.99 monthly", "membership continues at $15 a month"). That gap is what the AI has to close. The full scoreboard is in `evals/report.md` and the app's Evaluation tab.
 
