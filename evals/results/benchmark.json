@@ -1,0 +1,61 @@
+{
+  "aiMode": "mock",
+  "note": "Mock AI: every call waits 0.4 s, so seconds show the effect of running calls in parallel. Real seconds come from --live.",
+  "createdAt": "2026-11-12T08:29:01.949255+00:00",
+  "comparison": [
+    {
+      "scenario": "Dad's blood pressure monitor",
+      "run": "first run",
+      "oldCalls": 14,
+      "oldSeconds": 5.657,
+      "newCalls": 6,
+      "newSeconds": 1.619,
+      "sameVerdicts": true
+    },
+    {
+      "scenario": "Dad's blood pressure monitor",
+      "run": "repeat run",
+      "oldCalls": 14,
+      "oldSeconds": 5.659,
+      "newCalls": 3,
+      "newSeconds": 1.217,
+      "sameVerdicts": true
+    },
+    {
+      "scenario": "Reorder AA batteries",
+      "run": "first run",
+      "oldCalls": 1,
+      "oldSeconds": 0.406,
+      "newCalls": 0,
+      "newSeconds": 0.0,
+      "sameVerdicts": true
+    },
+    {
+      "scenario": "Reorder AA batteries",
+      "run": "repeat run",
+      "oldCalls": 1,
+      "oldSeconds": 0.406,
+      "newCalls": 0,
+      "newSeconds": 0.0,
+      "sameVerdicts": true
+    },
+    {
+      "scenario": "Cheap dinner delivery",
+      "run": "first run",
+      "oldCalls": 10,
+      "oldSeconds": 4.033,
+      "newCalls": 2,
+      "newSeconds": 0.405,
+      "sameVerdicts": true
+    },
+    {
+      "scenario": "Cheap dinner delivery",
+      "run": "repeat run",
+      "oldCalls": 10,
+      "oldSeconds": 4.045,
+      "newCalls": 0,
+      "newSeconds": 0.001,
+      "sameVerdicts": true
+    }
+  ]
+}

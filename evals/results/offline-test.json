@@ -1,0 +1,744 @@
+{
+  "config": "offline",
+  "split": "test",
+  "repeats": 1,
+  "aiMode": "offline",
+  "models": {
+    "fast": "claude-haiku-5-5",
+    "judge": "claude-sonnet-5-5"
+  },
+  "createdAt": "2026-11-12T08:28:38.345913+00:00",
+  "summary": {
+    "offers": 20,
+    "runs": 20,
+    "accuracy": 0.8,
+    "falseApprovals": [
+      "s02",
+      "s04",
+      "s06"
+    ],
+    "falseRejections": [
+      "c10"
+    ],
+    "fieldAccuracy": 0.9375,
+    "droppedCitations": 0,
+    "aiCalls": 0,
+    "fallbackRate": null,
+    "medianSeconds": 0.0,
+    "p95Seconds": 0.0,
+    "avgAiCalls": 0.0,
+    "avgCost": 0.0,
+    "avgInputTokens": 0.0,
+    "consistency": null,
+    "byGroup": {
+      "clean": {
+        "runs": 5,
+        "correct": 4
+      },
+      "sub_trap": {
+        "runs": 4,
+        "correct": 1
+      },
+      "hidden_fee": {
+        "runs": 3,
+        "correct": 3
+      },
+      "returns": {
+        "runs": 2,
+        "correct": 2
+      },
+      "gray": {
+        "runs": 3,
+        "correct": 3
+      },
+      "safe_words": {
+        "runs": 3,
+        "correct": 3
+      }
+    },
+    "bars": [
+      {
+        "metric": "Traps approved",
+        "value": 3,
+        "bar": "0",
+        "passed": false
+      },
+      {
+        "metric": "Good offers blocked",
+        "value": 1,
+        "bar": "2 or fewer",
+        "passed": true
+      },
+      {
+        "metric": "Field accuracy",
+        "value": 0.938,
+        "bar": "90% or better",
+        "passed": true
+      },
+      {
+        "metric": "Fallback rate",
+        "value": null,
+        "bar": "under 5%",
+        "passed": null
+      },
+      {
+        "metric": "Median seconds",
+        "value": 0.0,
+        "bar": "under 10 s",
+        "passed": true
+      },
+      {
+        "metric": "Consistency",
+        "value": null,
+        "bar": "95% or better",
+        "passed": null
+      }
+    ],
+    "safetyNetCatches": 0
+  },
+  "rows": [
+    {
+      "id": "c02",
+      "group": "clean",
+      "title": "Wireless mouse",
+      "expected": "APPROVE",
+      "got": "APPROVE",
+      "correct": true,
+      "decidedBy": "quick check",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 19.5,
+        "recurring": null,
+        "returnCost": 0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 0.001,
+      "aiCalls": 0,
+      "fallbacks": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "cost": 0,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Honest one-time price, free returns"
+    },
+    {
+      "id": "c04",
+      "group": "clean",
+      "title": "Yoga mat",
+      "expected": "APPROVE",
+      "got": "APPROVE",
+      "correct": true,
+      "decidedBy": "quick check",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 29.0,
+        "recurring": null,
+        "returnCost": 0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 0.0,
+      "aiCalls": 0,
+      "fallbacks": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "cost": 0,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Shipping included, free returns"
+    },
+    {
+      "id": "c06",
+      "group": "clean",
+      "title": "USB-C charger",
+      "expected": "APPROVE",
+      "got": "APPROVE",
+      "correct": true,
+      "decidedBy": "quick check",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 22.99,
+        "recurring": null,
+        "returnCost": 0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 0.0,
+      "aiCalls": 0,
+      "fallbacks": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "cost": 0,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Honest one-time price"
+    },
+    {
+      "id": "c08",
+      "group": "clean",
+      "title": "Bluetooth speaker",
+      "expected": "APPROVE",
+      "got": "APPROVE",
+      "correct": true,
+      "decidedBy": "quick check",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 49.99,
+        "recurring": null,
+        "returnCost": 0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 0.0,
+      "aiCalls": 0,
+      "fallbacks": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "cost": 0,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Honest one-time price"
+    },
+    {
+      "id": "c10",
+      "group": "clean",
+      "title": "Weekly pill organizer",
+      "expected": "APPROVE",
+      "got": "REJECT",
+      "correct": false,
+      "decidedBy": "code",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": false,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 3,
+      "found": {
+        "totalDueToday": 12.49,
+        "recurring": null,
+        "returnCost": null,
+        "hiddenFees": 0.0
+      },
+      "seconds": 0.0,
+      "aiCalls": 0,
+      "fallbacks": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "cost": 0,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Free returns, worded differently"
+    },
+    {
+      "id": "s02",
+      "group": "sub_trap",
+      "title": "Meal planner box",
+      "expected": "REJECT",
+      "got": "APPROVE",
+      "correct": false,
+      "decidedBy": "trial",
+      "tier": "high",
+      "fieldChecks": {
+        "total": true,
+        "recurring": false,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 3,
+      "found": {
+        "totalDueToday": 5.0,
+        "recurring": null,
+        "returnCost": 0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 0.0,
+      "aiCalls": 0,
+      "fallbacks": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "cost": 0,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Converts to a weekly paid plan"
+    },
+    {
+      "id": "s04",
+      "group": "sub_trap",
+      "title": "Coffee sampler",
+      "expected": "REJECT",
+      "got": "APPROVE",
+      "correct": false,
+      "decidedBy": "quick check",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": false,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 3,
+      "found": {
+        "totalDueToday": 1.99,
+        "recurring": null,
+        "returnCost": 0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 0.0,
+      "aiCalls": 0,
+      "fallbacks": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "cost": 0,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Monthly shipments after the sampler"
+    },
+    {
+      "id": "s06",
+      "group": "sub_trap",
+      "title": "Language course kit",
+      "expected": "REJECT",
+      "got": "APPROVE",
+      "correct": false,
+      "decidedBy": "trial",
+      "tier": "high",
+      "fieldChecks": {
+        "total": true,
+        "recurring": false,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 3,
+      "found": {
+        "totalDueToday": 0.99,
+        "recurring": null,
+        "returnCost": 0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 0.0,
+      "aiCalls": 0,
+      "fallbacks": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "cost": 0,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Membership continues monthly"
+    },
+    {
+      "id": "s08",
+      "group": "sub_trap",
+      "title": "Home security camera",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "high",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 25.0,
+        "recurring": {
+          "amount": 10.0,
+          "interval": "month"
+        },
+        "returnCost": 0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 0.0,
+      "aiCalls": 0,
+      "fallbacks": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "cost": 0,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Auto-renewing cloud plan"
+    },
+    {
+      "id": "h02",
+      "group": "hidden_fee",
+      "title": "Air purifier",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 65.99,
+        "recurring": null,
+        "returnCost": 0,
+        "hiddenFees": 6.0
+      },
+      "seconds": 0.0,
+      "aiCalls": 0,
+      "fallbacks": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "cost": 0,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Service charge added at checkout"
+    },
+    {
+      "id": "h04",
+      "group": "hidden_fee",
+      "title": "Blender",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 47.5,
+        "recurring": null,
+        "returnCost": 0,
+        "hiddenFees": 2.5
+      },
+      "seconds": 0.0,
+      "aiCalls": 0,
+      "fallbacks": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "cost": 0,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Convenience fee"
+    },
+    {
+      "id": "h06",
+      "group": "hidden_fee",
+      "title": "Headphones",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 101.0,
+        "recurring": null,
+        "returnCost": 0,
+        "hiddenFees": 12.0
+      },
+      "seconds": 0.0,
+      "aiCalls": 0,
+      "fallbacks": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "cost": 0,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Fees push it over budget"
+    },
+    {
+      "id": "r02",
+      "group": "returns",
+      "title": "Electric kettle",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 34.0,
+        "recurring": null,
+        "returnCost": 8.5,
+        "hiddenFees": 0.0
+      },
+      "seconds": 0.0,
+      "aiCalls": 0,
+      "fallbacks": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "cost": 0,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Buyer pays return shipping"
+    },
+    {
+      "id": "r04",
+      "group": "returns",
+      "title": "Sofa cushion set",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "code",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": false,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 3,
+      "found": {
+        "totalDueToday": 55.0,
+        "recurring": null,
+        "returnCost": null,
+        "hiddenFees": 0.0
+      },
+      "seconds": 0.0,
+      "aiCalls": 0,
+      "fallbacks": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "cost": 0,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Return processing fee"
+    },
+    {
+      "id": "g02",
+      "group": "gray",
+      "title": "Waterproof hiking watch",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "trial",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 65.0,
+        "recurring": null,
+        "returnCost": 0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 0.0,
+      "aiCalls": 0,
+      "fallbacks": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "cost": 0,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "'Waterproof' claim contradicted"
+    },
+    {
+      "id": "g04",
+      "group": "gray",
+      "title": "Ceramic mug set",
+      "expected": "APPROVE",
+      "got": "APPROVE",
+      "correct": true,
+      "decidedBy": "quick check",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 26.0,
+        "recurring": null,
+        "returnCost": 0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 0.0,
+      "aiCalls": 0,
+      "fallbacks": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "cost": 0,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Minor caveat, nothing misleading"
+    },
+    {
+      "id": "g06",
+      "group": "gray",
+      "title": "Certified refurbished phone",
+      "expected": "REJECT",
+      "got": "REJECT",
+      "correct": true,
+      "decidedBy": "trial",
+      "tier": "medium",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 99.0,
+        "recurring": null,
+        "returnCost": 0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 0.0,
+      "aiCalls": 0,
+      "fallbacks": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "cost": 0,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Certification excludes the battery"
+    },
+    {
+      "id": "x03",
+      "group": "safe_words",
+      "title": "Trial-size skincare set",
+      "expected": "APPROVE",
+      "got": "APPROVE",
+      "correct": true,
+      "decidedBy": "trial",
+      "tier": "high",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 14.0,
+        "recurring": null,
+        "returnCost": 0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 0.0,
+      "aiCalls": 0,
+      "fallbacks": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "cost": 0,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "'Trial-size' is a size, not a free trial"
+    },
+    {
+      "id": "x04",
+      "group": "safe_words",
+      "title": "Gym bag",
+      "expected": "APPROVE",
+      "got": "APPROVE",
+      "correct": true,
+      "decidedBy": "trial",
+      "tier": "high",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 38.0,
+        "recurring": null,
+        "returnCost": 0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 0.0,
+      "aiCalls": 0,
+      "fallbacks": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "cost": 0,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Mentions fees only to say there are none"
+    },
+    {
+      "id": "x05",
+      "group": "safe_words",
+      "title": "Phone case",
+      "expected": "APPROVE",
+      "got": "APPROVE",
+      "correct": true,
+      "decidedBy": "trial",
+      "tier": "high",
+      "fieldChecks": {
+        "total": true,
+        "recurring": true,
+        "returnCost": true,
+        "hiddenFees": true
+      },
+      "fieldsCorrect": 4,
+      "found": {
+        "totalDueToday": 16.0,
+        "recurring": null,
+        "returnCost": 0,
+        "hiddenFees": 0.0
+      },
+      "seconds": 0.0,
+      "aiCalls": 0,
+      "fallbacks": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "cost": 0,
+      "droppedCitations": 0,
+      "safetyNet": [],
+      "reason": "Mentions membership and fees only to say there are none"
+    }
+  ]
+}
