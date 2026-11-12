@@ -1,0 +1,33 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Countersign",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "backend.server",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "serverReadyAction": {
+        "pattern": "running at (http://localhost:[0-9]+)",
+        "uriFormat": "%s",
+        "action": "openExternally"
+      }
+    },
+    {
+      "name": "Run Countersign (mock AI, no key needed)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "backend.server",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "env": { "AI_MODE": "mock" },
+      "serverReadyAction": {
+        "pattern": "running at (http://localhost:[0-9]+)",
+        "uriFormat": "%s",
+        "action": "openExternally"
+      }
+    }
+  ]
+}
