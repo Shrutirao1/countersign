@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Countersign</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ Header ============ -->
+  <header class="top">
+    <div class="brand">
+      <span class="gavel" aria-hidden="true">⚖</span>
+      <div>
+        <h1>Countersign</h1>
+        <p>Your AI agent signs. Countersign checks the deal before PayPal pays.</p>
+      </div>
+    </div>
+    <div class="modes" id="modes"></div>
+  </header>
+
+  <!-- ============ Tabs ============ -->
+  <nav class="tabs" aria-label="Sections">
+    <a href="#court" data-tab="court">Courtroom</a>
+    <a href="#receipts" data-tab="receipts">Receipts</a>
+    <a href="#dashboard" data-tab="dashboard">Dashboard</a>
+    <a href="#eval" data-tab="eval">Evaluation</a>
+  </nav>
+
+  <!-- ============ Tab 1: Courtroom ============ -->
+  <section class="view" id="view-court">
+    <div class="layout">
+      <!-- Left: the guardian's rules -->
+      <aside class="panel guardian">
+        <h2>Guardian Mode</h2>
+        <p class="muted">You set the rules for <strong id="protected">Dad</strong>'s shopping agent. Code checks them, so no AI can argue past them.</p>
+
+        <label class="field" for="scenario"><span>Task for the agent</span></label>
+        <select id="scenario"></select>
+        <p class="request" id="requestText"></p>
+
+        <label class="field" for="budget"><span>Spending limit (PayPal hold)</span></label>
+        <div class="money"><span>$</span><input id="budget" type="number" min="1" step="1" /></div>
+
+        <div class="toggles">
+          <label><input type="checkbox" id="noSubscriptions" /> No subscriptions or auto-renewals</label>
+          <label><input type="checkbox" id="requireFreeReturns" /> Returns must be free</label>
+          <label><input type="checkbox" id="noHiddenFees" /> No fees beyond the advertised price</label>
+        </div>
+
+        <div class="pay">
+          <p class="muted small">Approve one PayPal hold for up to your limit. Only an approved purchase is captured; the rest is released.</p>
+          <div id="paypal-buttons"></div>
+          <button id="simApprove" class="primary hidden" type="button">Approve hold with PayPal (simulated)</button>
+        </div>
+
+        <div class="precedents">
+          <div class="row">
+            <h3>Case law</h3>
+            <button id="resetDemo" class="link" type="button">Reset demo</button>
+          </div>
+          <p class="muted small">Merchants caught before start at higher risk. Reset clears case law and the facts cache.</p>
+          <ul id="precedentList"></ul>
+        </div>
+      </aside>
+
+      <!-- Middle: the live case -->
+      <section class="panel court">
+        <div class="court-head">
+          <h2>The Courtroom</h2>
+          <div class="hold" id="hold">No funds held</div>
+        </div>
+        <div id="docket" class="docket">
+          <div class="empty">
+            <p>Pick a task, set the rules, and approve the PayPal hold.</p>
+            <p class="muted">Clear-cut traps are rejected by code in milliseconds. Only real gray areas go to an AI trial. Then PayPal captures or voids.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right: numbers and outcome -->
+      <aside class="side">
+        <div class="panel">
+          <h2>This case</h2>
+          <div id="caseMetrics" class="metric-grid">
+            <div class="metric"><span>AI calls</span><b>–</b></div>
+            <div class="metric"><span>Seconds</span><b>–</b></div>
+            <div class="metric"><span>Decided by code</span><b>–</b></div>
+            <div class="metric"><span>From cache</span><b>–</b></div>
+          </div>
+          <p class="muted small" id="metricsNote">Measured on the server for every case.</p>
+        </div>
+        <div class="panel hidden" id="counterfactual"></div>
+        <div class="panel">
+          <h2>For the guardian</h2>
+          <div id="summary" class="summary-text muted">The plain-English outcome appears here.</div>
+        </div>
+        <div class="panel hidden" id="receiptCard"></div>
+        <div class="panel tiers">
+          <h3>How scrutiny is decided</h3>
+          <div class="tier low"><b>Low</b> Verified merchant: code only.</div>
+          <div class="tier medium"><b>Medium</b> Read fine print, one quick AI check.</div>
+          <div class="tier high"><b>High</b> Read fine print; trial if the rules pass.</div>
+          <p class="muted small">A failed rule always means reject by code. No AI needed.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ Tab 2: Receipts ============ -->
+  <section class="view hidden" id="view-receipts">
+    <div class="page">
+      <div class="page-head">
+        <div>
+          <h2>Receipts</h2>
+          <p class="muted">Every case is saved with a hash of the receipt before it. Change one old receipt and the chain breaks.</p>
+        </div>
+        <button id="verifyChain" class="primary narrow" type="button">Verify chain</button>
+      </div>
+      <div id="chainStatus"></div>
+      <div class="split">
+        <div class="panel list-panel"><ul id="receiptList" class="receipt-list"></ul></div>
+        <div class="panel" id="receiptDetail"><p class="muted">Pick a receipt to see everything that happened in that case.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Tab 3: Dashboard ============ -->
+  <section class="view hidden" id="view-dashboard">
+    <div class="page">
+      <h2>Dashboard</h2>
+      <p class="muted">Totals across every case, added up from the receipts.</p>
+      <div id="tiles" class="tiles"></div>
+      <div class="panel">
+        <h3>Recent cases</h3>
+        <div class="table-wrap"><table id="recentTable"></table></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Tab 4: Evaluation ============ -->
+  <section class="view hidden" id="view-eval">
+    <div class="page">
+      <h2>Evaluation</h2>
+      <p class="muted">40 labeled offers: 20 to tune on, 20 held out for the final test. The bar to ship is zero traps approved.</p>
+      <div class="panel">
+        <h3>Scoreboard</h3>
+        <div class="table-wrap"><table id="scoreboard"></table></div>
+        <p class="muted small" id="scoreNote"></p>
+      </div>
+      <div class="panel">
+        <h3>Before and after the speed and cost changes</h3>
+        <div id="benchmark"></div>
+      </div>
+      <div class="panel">
+        <div class="row">
+          <h3>Offer by offer</h3>
+          <select id="runPicker"></select>
+        </div>
+        <div class="table-wrap"><table id="offerTable"></table></div>
+      </div>
+      <div class="panel">
+        <h3>Run it yourself</h3>
+<pre class="commands">python -m evals.run --config offline --split dev          # baseline, no AI
+python -m evals.run --config mixed --split dev --repeats 3  # real AI (needs your key)
+python -m evals.run --config mixed --split test --repeats 3 # once, after the freeze
+python -m evals.benchmark                                   # old design vs new design</pre>
+      </div>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
