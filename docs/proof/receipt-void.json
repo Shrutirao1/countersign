@@ -1,0 +1,458 @@
+{
+  "seq": 4,
+  "id": "CS-0004",
+  "createdAt": "2026-11-12T17:23:43.121024+00:00",
+  "previousHash": "7dd1479dffbd19cddbf1d80adae978065cf0a589452091734214bb7300fcc9e1",
+  "body": {
+    "scenario": "mealkit",
+    "request": "Find Dad a cheap dinner delivery deal.",
+    "protectedPerson": "Dad",
+    "rules": {
+      "budget": 50.0,
+      "noSubscriptions": true,
+      "maxMonthly": 0.0,
+      "requireFreeReturns": false,
+      "noHiddenFees": true
+    },
+    "outcome": "voided",
+    "payment": {
+      "orderId": "0NW72853JC891092T",
+      "authorizationId": "505138425W276120X",
+      "paypalMode": "sandbox",
+      "action": "void",
+      "captureId": null,
+      "amount": 0,
+      "released": 50.0
+    },
+    "aiMode": "live",
+    "flags": {
+      "useCache": true,
+      "parallel": true,
+      "skipTrialOnRuleFail": true,
+      "shopperUsesAi": false
+    },
+    "offers": [
+      {
+        "offerId": "meal-boxly",
+        "title": "Boxly Dinner Box (first box)",
+        "merchant": "Boxly Meals",
+        "tier": "high",
+        "verdict": "REJECT",
+        "decidedBy": "code",
+        "facts": {
+          "totalDueToday": 1.0,
+          "recurring": {
+            "amount": 69.99,
+            "interval": "week"
+          },
+          "returnCost": null,
+          "hiddenFees": [],
+          "yearCost": 3640.48,
+          "safetyNet": []
+        },
+        "issues": [
+          "Renews at $69.99 per week"
+        ]
+      },
+      {
+        "offerId": "meal-freshfork",
+        "title": "FreshFork Meal Plan, 50% off first month",
+        "merchant": "FreshFork",
+        "tier": "high",
+        "verdict": "REJECT",
+        "decidedBy": "code",
+        "facts": {
+          "totalDueToday": 29.99,
+          "recurring": {
+            "amount": 59.99,
+            "interval": "month"
+          },
+          "returnCost": null,
+          "hiddenFees": [
+            {
+              "label": "Early cancellation fee (only if cancelled early; not charged today)",
+              "amount": 25.0
+            }
+          ],
+          "yearCost": 749.87,
+          "safetyNet": []
+        },
+        "issues": [
+          "Renews at $59.99 per month",
+          "Early cancellation fee (only if cancelled early; not charged today) $25.00 (+$25.00)"
+        ]
+      }
+    ],
+    "counterfactual": {
+      "naiveTitle": "Boxly Dinner Box (first box)",
+      "naiveMerchant": "Boxly Meals",
+      "naiveAdvertised": 1.0,
+      "naiveYearCost": 3640.48,
+      "chosenTitle": null,
+      "chosenYearCost": 0.0,
+      "saved": 3640.48
+    },
+    "metrics": {
+      "aiCalls": 2,
+      "byAgent": {
+        "extractor": 2
+      },
+      "inputTokens": 748,
+      "outputTokens": 931,
+      "cost": 0.00054,
+      "fallbacks": 0,
+      "offlineSteps": 0,
+      "decidedByCode": 2,
+      "cacheHits": 0,
+      "seconds": 4.547,
+      "pricesSet": true
+    },
+    "events": [
+      {
+        "type": "hold",
+        "authorizationId": "505138425W276120X",
+        "amount": 50.0
+      },
+      {
+        "type": "reading",
+        "offers": [
+          "Boxly Dinner Box (first box)",
+          "FreshFork Meal Plan, 50% off first month"
+        ],
+        "fromCache": 0,
+        "parallel": true
+      },
+      {
+        "type": "proposal",
+        "round": 1,
+        "mode": "code",
+        "reason": "Lowest upfront price: $1.00.",
+        "offer": {
+          "id": "meal-boxly",
+          "title": "Boxly Dinner Box (first box)",
+          "merchant": "Boxly Meals",
+          "trialTested": false,
+          "advertised": 1.0,
+          "evidence": [
+            {
+              "id": "E1",
+              "source": "Product page",
+              "text": "Try your first dinner box for just $1!"
+            },
+            {
+              "id": "E2",
+              "source": "Checkout",
+              "text": "Order total today: $1.00"
+            },
+            {
+              "id": "E3",
+              "source": "Terms",
+              "text": "After your first box, your plan renews automatically at $69.99 per week until cancelled."
+            },
+            {
+              "id": "E4",
+              "source": "Terms",
+              "text": "Cancellations take effect after the next scheduled delivery."
+            }
+          ]
+        }
+      },
+      {
+        "type": "risk",
+        "round": 1,
+        "score": 70,
+        "tier": "high",
+        "reasons": [
+          {
+            "points": 15,
+            "label": "No verified case file"
+          },
+          {
+            "points": 30,
+            "label": "Recurring-charge language in the fine print"
+          },
+          {
+            "points": 25,
+            "label": "Teaser or trial pricing"
+          }
+        ],
+        "precedents": 0
+      },
+      {
+        "type": "facts",
+        "round": 1,
+        "mode": "live",
+        "facts": {
+          "totalDueToday": 1.0,
+          "recurring": {
+            "amount": 69.99,
+            "interval": "week"
+          },
+          "returnCost": null,
+          "hiddenFees": [],
+          "yearCost": 3640.48,
+          "safetyNet": []
+        }
+      },
+      {
+        "type": "rules",
+        "round": 1,
+        "results": [
+          {
+            "rule": "Total today must be at most $50",
+            "passed": true,
+            "detail": "Total due today is $1.00",
+            "evidence": [
+              "E2"
+            ]
+          },
+          {
+            "rule": "No subscriptions or auto-renewals",
+            "passed": false,
+            "detail": "Renews at $69.99 per week",
+            "evidence": [
+              "E3"
+            ]
+          },
+          {
+            "rule": "No fees beyond the advertised price",
+            "passed": true,
+            "detail": "Advertised price matches the total",
+            "evidence": []
+          }
+        ],
+        "source": "Read from the fine print"
+      },
+      {
+        "type": "verdict",
+        "round": 1,
+        "tier": "high",
+        "verdict": "REJECT",
+        "decidedBy": "code",
+        "reasoning": "Rejected by code in milliseconds. A hard rule failed, and no AI can overrule it, so a trial would change nothing.",
+        "keyFindings": [
+          {
+            "point": "No subscriptions or auto-renewals: Renews at $69.99 per week",
+            "evidence": [
+              "E3"
+            ]
+          }
+        ],
+        "facts": {
+          "totalDueToday": 1.0,
+          "recurring": {
+            "amount": 69.99,
+            "interval": "week"
+          },
+          "returnCost": null,
+          "hiddenFees": [],
+          "yearCost": 3640.48,
+          "safetyNet": []
+        }
+      },
+      {
+        "type": "sent_back",
+        "round": 1,
+        "remaining": 1
+      },
+      {
+        "type": "proposal",
+        "round": 2,
+        "mode": "code",
+        "reason": "Lowest upfront price: $29.99.",
+        "offer": {
+          "id": "meal-freshfork",
+          "title": "FreshFork Meal Plan, 50% off first month",
+          "merchant": "FreshFork",
+          "trialTested": false,
+          "advertised": 29.99,
+          "evidence": [
+            {
+              "id": "E1",
+              "source": "Product page",
+              "text": "Half off your first month: $29.99. No commitment!"
+            },
+            {
+              "id": "E2",
+              "source": "Checkout",
+              "text": "Order total today: $29.99"
+            },
+            {
+              "id": "E3",
+              "source": "Terms",
+              "text": "Introductory pricing applies to the first month only. Plan renews automatically at $59.99 per month. Early cancellation fee: $25.00."
+            }
+          ]
+        }
+      },
+      {
+        "type": "risk",
+        "round": 2,
+        "score": 95,
+        "tier": "high",
+        "reasons": [
+          {
+            "points": 15,
+            "label": "No verified case file"
+          },
+          {
+            "points": 10,
+            "label": "Half the budget or more"
+          },
+          {
+            "points": 30,
+            "label": "Recurring-charge language in the fine print"
+          },
+          {
+            "points": 25,
+            "label": "Teaser or trial pricing"
+          },
+          {
+            "points": 15,
+            "label": "Fee language at checkout"
+          }
+        ],
+        "precedents": 0
+      },
+      {
+        "type": "facts",
+        "round": 2,
+        "mode": "live",
+        "facts": {
+          "totalDueToday": 29.99,
+          "recurring": {
+            "amount": 59.99,
+            "interval": "month"
+          },
+          "returnCost": null,
+          "hiddenFees": [
+            {
+              "label": "Early cancellation fee (only if cancelled early; not charged today)",
+              "amount": 25.0
+            }
+          ],
+          "yearCost": 749.87,
+          "safetyNet": []
+        }
+      },
+      {
+        "type": "rules",
+        "round": 2,
+        "results": [
+          {
+            "rule": "Total today must be at most $50",
+            "passed": true,
+            "detail": "Total due today is $29.99",
+            "evidence": [
+              "E2"
+            ]
+          },
+          {
+            "rule": "No subscriptions or auto-renewals",
+            "passed": false,
+            "detail": "Renews at $59.99 per month",
+            "evidence": [
+              "E3"
+            ]
+          },
+          {
+            "rule": "No fees beyond the advertised price",
+            "passed": false,
+            "detail": "Early cancellation fee (only if cancelled early; not charged today) $25.00 (+$25.00)",
+            "evidence": [
+              "E3"
+            ]
+          }
+        ],
+        "source": "Read from the fine print"
+      },
+      {
+        "type": "verdict",
+        "round": 2,
+        "tier": "high",
+        "verdict": "REJECT",
+        "decidedBy": "code",
+        "reasoning": "Rejected by code in milliseconds. A hard rule failed, and no AI can overrule it, so a trial would change nothing.",
+        "keyFindings": [
+          {
+            "point": "No subscriptions or auto-renewals: Renews at $59.99 per month",
+            "evidence": [
+              "E3"
+            ]
+          },
+          {
+            "point": "No fees beyond the advertised price: Early cancellation fee (only if cancelled early; not charged today) $25.00 (+$25.00)",
+            "evidence": [
+              "E3"
+            ]
+          }
+        ],
+        "facts": {
+          "totalDueToday": 29.99,
+          "recurring": {
+            "amount": 59.99,
+            "interval": "month"
+          },
+          "returnCost": null,
+          "hiddenFees": [
+            {
+              "label": "Early cancellation fee (only if cancelled early; not charged today)",
+              "amount": 25.0
+            }
+          ],
+          "yearCost": 749.87,
+          "safetyNet": []
+        }
+      },
+      {
+        "type": "sent_back",
+        "round": 2,
+        "remaining": 0
+      },
+      {
+        "type": "payment",
+        "action": "void",
+        "amount": 0,
+        "released": 50.0
+      },
+      {
+        "type": "counterfactual",
+        "naiveTitle": "Boxly Dinner Box (first box)",
+        "naiveMerchant": "Boxly Meals",
+        "naiveAdvertised": 1.0,
+        "naiveYearCost": 3640.48,
+        "chosenTitle": null,
+        "chosenYearCost": 0.0,
+        "saved": 3640.48
+      },
+      {
+        "type": "metrics",
+        "aiMode": "live",
+        "flags": {
+          "useCache": true,
+          "parallel": true,
+          "skipTrialOnRuleFail": true,
+          "shopperUsesAi": false
+        },
+        "aiCalls": 2,
+        "byAgent": {
+          "extractor": 2
+        },
+        "inputTokens": 748,
+        "outputTokens": 931,
+        "cost": 0.00054,
+        "fallbacks": 0,
+        "offlineSteps": 0,
+        "decidedByCode": 2,
+        "cacheHits": 0,
+        "seconds": 4.547,
+        "pricesSet": true
+      },
+      {
+        "type": "summary",
+        "text": "Blocked Boxly Meals: advertised cheap, but it renews at $69.99 per week (about $3640.48 in the first year).\nBlocked FreshFork: advertised cheap, but it renews at $59.99 per month (about $749.87 in the first year).\nNothing was bought for Dad. Every option hid a charge or broke your rules, so PayPal released the hold and Dad was not charged."
+      }
+    ]
+  },
+  "hash": "6076c786bdb29642a3b6f1c2ada550489fe3cd6aa8f5e3c6ef47900e88b650d3"
+}

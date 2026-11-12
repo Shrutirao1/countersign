@@ -1,0 +1,926 @@
+{
+  "seq": 3,
+  "id": "CS-0003",
+  "createdAt": "2026-11-12T17:19:57.750935+00:00",
+  "previousHash": "7fd10ec391a4131d49609d797fd01cd64f3c255b9b8021a3b60fb33aaab91168",
+  "body": {
+    "scenario": "dad_bp",
+    "request": "Buy my dad a blood pressure monitor.",
+    "protectedPerson": "Dad",
+    "rules": {
+      "budget": 100.0,
+      "noSubscriptions": true,
+      "maxMonthly": 0.0,
+      "requireFreeReturns": true,
+      "noHiddenFees": true
+    },
+    "outcome": "approved",
+    "payment": {
+      "orderId": "4UG80882NM106352L",
+      "authorizationId": "73M761219B118463F",
+      "paypalMode": "sandbox",
+      "action": "capture",
+      "captureId": "5RB14459HY024794X",
+      "amount": 52.0,
+      "released": 48.0
+    },
+    "aiMode": "live",
+    "flags": {
+      "useCache": true,
+      "parallel": true,
+      "skipTrialOnRuleFail": true,
+      "shopperUsesAi": false
+    },
+    "offers": [
+      {
+        "offerId": "bp-quickcare",
+        "title": "VitalTrack Pro Blood Pressure Monitor",
+        "merchant": "QuickCare Direct",
+        "tier": "high",
+        "verdict": "REJECT",
+        "decidedBy": "code",
+        "facts": {
+          "totalDueToday": 4.99,
+          "recurring": {
+            "amount": 79.0,
+            "interval": "month"
+          },
+          "returnCost": 32.3,
+          "hiddenFees": [
+            {
+              "label": "VitalTrack Premium Membership after 14-day trial, renews monthly until cancelled",
+              "amount": 79.0
+            },
+            {
+              "label": "Restocking fee on returns (15% of $129.00 retail value)",
+              "amount": 19.35
+            },
+            {
+              "label": "Return shipping on returns (flat rate)",
+              "amount": 12.95
+            }
+          ],
+          "yearCost": 952.99,
+          "safetyNet": []
+        },
+        "issues": [
+          "Renews at $79.00 per month",
+          "Returning it costs about $32.30",
+          "VitalTrack Premium Membership after 14-day trial, renews monthly until cancelled $79.00, Restocking fee on returns (15% of $129.00 retail value) $19.35, Return shipping on returns (flat rate) $12.95 (+$111.30)"
+        ]
+      },
+      {
+        "offerId": "bp-medmart",
+        "title": "ArmSense BP5 Upper Arm Monitor",
+        "merchant": "MedMart Online",
+        "tier": "medium",
+        "verdict": "REJECT",
+        "decidedBy": "code",
+        "facts": {
+          "totalDueToday": 55.48,
+          "recurring": null,
+          "returnCost": 0.0,
+          "hiddenFees": [
+            {
+              "label": "Handling & processing fee",
+              "amount": 8.5
+            },
+            {
+              "label": "Shipping",
+              "amount": 6.99
+            }
+          ],
+          "yearCost": 55.48,
+          "safetyNet": []
+        },
+        "issues": [
+          "Handling & processing fee $8.50, Shipping $6.99 (+$15.49)"
+        ]
+      },
+      {
+        "offerId": "bp-pulseright",
+        "title": "PulseRight Refurbished Arm Monitor",
+        "merchant": "PulseRight Renewed",
+        "tier": "medium",
+        "verdict": "REJECT",
+        "decidedBy": "trial",
+        "facts": {
+          "totalDueToday": 44.0,
+          "recurring": null,
+          "returnCost": 0.0,
+          "hiddenFees": [],
+          "yearCost": 44.0,
+          "safetyNet": []
+        },
+        "issues": [
+          "The product page promises 'Clinically validated accuracy' for a blood pressure monitor, but the product details say the validation refers only to the original model, before refurbishment. The refurbished unit being bought is therefore not covered by the accuracy claim, and the buyer would be misled about the reliability of readings from the device used for Dad's health monitoring."
+        ]
+      },
+      {
+        "offerId": "bp-carecheck",
+        "title": "CareCheck Classic Blood Pressure Monitor",
+        "merchant": "CareCheck Health",
+        "tier": "low",
+        "verdict": "APPROVE",
+        "decidedBy": "code",
+        "facts": {
+          "totalDueToday": 52.0,
+          "recurring": null,
+          "returnCost": 0,
+          "hiddenFees": [],
+          "yearCost": 52.0,
+          "safetyNet": []
+        },
+        "issues": []
+      }
+    ],
+    "counterfactual": {
+      "naiveTitle": "VitalTrack Pro Blood Pressure Monitor",
+      "naiveMerchant": "QuickCare Direct",
+      "naiveAdvertised": 4.99,
+      "naiveYearCost": 952.99,
+      "chosenTitle": "CareCheck Classic Blood Pressure Monitor",
+      "chosenYearCost": 52.0,
+      "saved": 900.99
+    },
+    "metrics": {
+      "aiCalls": 6,
+      "byAgent": {
+        "extractor": 3,
+        "quick check": 1,
+        "defense": 1,
+        "judge": 1
+      },
+      "inputTokens": 3925,
+      "outputTokens": 3141,
+      "cost": 0.008252,
+      "fallbacks": 0,
+      "offlineSteps": 0,
+      "decidedByCode": 3,
+      "cacheHits": 0,
+      "seconds": 15.76,
+      "pricesSet": true
+    },
+    "events": [
+      {
+        "type": "hold",
+        "authorizationId": "73M761219B118463F",
+        "amount": 100.0
+      },
+      {
+        "type": "reading",
+        "offers": [
+          "VitalTrack Pro Blood Pressure Monitor",
+          "ArmSense BP5 Upper Arm Monitor",
+          "PulseRight Refurbished Arm Monitor"
+        ],
+        "fromCache": 0,
+        "parallel": true
+      },
+      {
+        "type": "proposal",
+        "round": 1,
+        "mode": "code",
+        "reason": "Lowest upfront price: $4.99.",
+        "offer": {
+          "id": "bp-quickcare",
+          "title": "VitalTrack Pro Blood Pressure Monitor",
+          "merchant": "QuickCare Direct",
+          "trialTested": false,
+          "advertised": 4.99,
+          "evidence": [
+            {
+              "id": "E1",
+              "source": "Product page",
+              "text": "VitalTrack Pro Blood Pressure Monitor. Start today for just $4.99!"
+            },
+            {
+              "id": "E2",
+              "source": "Product page",
+              "text": "FREE returns, no questions asked."
+            },
+            {
+              "id": "E3",
+              "source": "Checkout",
+              "text": "Order total today: $4.99"
+            },
+            {
+              "id": "E4",
+              "source": "Terms of Service, section 3",
+              "text": "Your $4.99 trial includes 14 days of VitalTrack Premium Membership. After the trial, membership renews automatically at $79.00 per month until cancelled."
+            },
+            {
+              "id": "E5",
+              "source": "Return Policy, section 2",
+              "text": "Returned devices are subject to a 15% restocking fee of the device's retail value ($129.00). Customer is responsible for return shipping ($12.95 flat rate)."
+            },
+            {
+              "id": "E6",
+              "source": "Terms of Service, section 7",
+              "text": "Cancellation requests must be submitted by phone during business hours (Mon-Fri, 9am-4pm ET)."
+            }
+          ]
+        }
+      },
+      {
+        "type": "risk",
+        "round": 1,
+        "score": 100,
+        "tier": "high",
+        "reasons": [
+          {
+            "points": 15,
+            "label": "No verified case file"
+          },
+          {
+            "points": 30,
+            "label": "Recurring-charge language in the fine print"
+          },
+          {
+            "points": 25,
+            "label": "Teaser or trial pricing"
+          },
+          {
+            "points": 15,
+            "label": "Fee language at checkout"
+          },
+          {
+            "points": 15,
+            "label": "Return costs in the fine print"
+          }
+        ],
+        "precedents": 0
+      },
+      {
+        "type": "facts",
+        "round": 1,
+        "mode": "live",
+        "facts": {
+          "totalDueToday": 4.99,
+          "recurring": {
+            "amount": 79.0,
+            "interval": "month"
+          },
+          "returnCost": 32.3,
+          "hiddenFees": [
+            {
+              "label": "VitalTrack Premium Membership after 14-day trial, renews monthly until cancelled",
+              "amount": 79.0
+            },
+            {
+              "label": "Restocking fee on returns (15% of $129.00 retail value)",
+              "amount": 19.35
+            },
+            {
+              "label": "Return shipping on returns (flat rate)",
+              "amount": 12.95
+            }
+          ],
+          "yearCost": 952.99,
+          "safetyNet": []
+        }
+      },
+      {
+        "type": "rules",
+        "round": 1,
+        "results": [
+          {
+            "rule": "Total today must be at most $100",
+            "passed": true,
+            "detail": "Total due today is $4.99",
+            "evidence": [
+              "E3"
+            ]
+          },
+          {
+            "rule": "No subscriptions or auto-renewals",
+            "passed": false,
+            "detail": "Renews at $79.00 per month",
+            "evidence": [
+              "E4"
+            ]
+          },
+          {
+            "rule": "Returns must be free",
+            "passed": false,
+            "detail": "Returning it costs about $32.30",
+            "evidence": [
+              "E2",
+              "E5"
+            ]
+          },
+          {
+            "rule": "No fees beyond the advertised price",
+            "passed": false,
+            "detail": "VitalTrack Premium Membership after 14-day trial, renews monthly until cancelled $79.00, Restocking fee on returns (15% of $129.00 retail value) $19.35, Return shipping on returns (flat rate) $12.95 (+$111.30)",
+            "evidence": [
+              "E4",
+              "E5"
+            ]
+          }
+        ],
+        "source": "Read from the fine print"
+      },
+      {
+        "type": "verdict",
+        "round": 1,
+        "tier": "high",
+        "verdict": "REJECT",
+        "decidedBy": "code",
+        "reasoning": "Rejected by code in milliseconds. A hard rule failed, and no AI can overrule it, so a trial would change nothing.",
+        "keyFindings": [
+          {
+            "point": "No subscriptions or auto-renewals: Renews at $79.00 per month",
+            "evidence": [
+              "E4"
+            ]
+          },
+          {
+            "point": "Returns must be free: Returning it costs about $32.30",
+            "evidence": [
+              "E2",
+              "E5"
+            ]
+          },
+          {
+            "point": "No fees beyond the advertised price: VitalTrack Premium Membership after 14-day trial, renews monthly until cancelled $79.00, Restocking fee on returns (15% of $129.00 retail value) $19.35, Return shipping on returns (flat rate) $12.95 (+$111.30)",
+            "evidence": [
+              "E4",
+              "E5"
+            ]
+          }
+        ],
+        "facts": {
+          "totalDueToday": 4.99,
+          "recurring": {
+            "amount": 79.0,
+            "interval": "month"
+          },
+          "returnCost": 32.3,
+          "hiddenFees": [
+            {
+              "label": "VitalTrack Premium Membership after 14-day trial, renews monthly until cancelled",
+              "amount": 79.0
+            },
+            {
+              "label": "Restocking fee on returns (15% of $129.00 retail value)",
+              "amount": 19.35
+            },
+            {
+              "label": "Return shipping on returns (flat rate)",
+              "amount": 12.95
+            }
+          ],
+          "yearCost": 952.99,
+          "safetyNet": []
+        }
+      },
+      {
+        "type": "sent_back",
+        "round": 1,
+        "remaining": 3
+      },
+      {
+        "type": "proposal",
+        "round": 2,
+        "mode": "code",
+        "reason": "Lowest upfront price: $39.99.",
+        "offer": {
+          "id": "bp-medmart",
+          "title": "ArmSense BP5 Upper Arm Monitor",
+          "merchant": "MedMart Online",
+          "trialTested": false,
+          "advertised": 39.99,
+          "evidence": [
+            {
+              "id": "E1",
+              "source": "Product page",
+              "text": "ArmSense BP5 Upper Arm Monitor, clinically validated. Only $39.99."
+            },
+            {
+              "id": "E2",
+              "source": "Checkout",
+              "text": "Subtotal $39.99. Handling & processing fee $8.50. Shipping $6.99. Total $55.48"
+            },
+            {
+              "id": "E3",
+              "source": "Return Policy",
+              "text": "Free returns within 30 days of delivery."
+            }
+          ]
+        }
+      },
+      {
+        "type": "risk",
+        "round": 2,
+        "score": 30,
+        "tier": "medium",
+        "reasons": [
+          {
+            "points": 15,
+            "label": "No verified case file"
+          },
+          {
+            "points": 15,
+            "label": "Fee language at checkout"
+          }
+        ],
+        "precedents": 0
+      },
+      {
+        "type": "facts",
+        "round": 2,
+        "mode": "live",
+        "facts": {
+          "totalDueToday": 55.48,
+          "recurring": null,
+          "returnCost": 0.0,
+          "hiddenFees": [
+            {
+              "label": "Handling & processing fee",
+              "amount": 8.5
+            },
+            {
+              "label": "Shipping",
+              "amount": 6.99
+            }
+          ],
+          "yearCost": 55.48,
+          "safetyNet": []
+        }
+      },
+      {
+        "type": "rules",
+        "round": 2,
+        "results": [
+          {
+            "rule": "Total today must be at most $100",
+            "passed": true,
+            "detail": "Total due today is $55.48",
+            "evidence": [
+              "E2"
+            ]
+          },
+          {
+            "rule": "No subscriptions or auto-renewals",
+            "passed": true,
+            "detail": "No recurring charge found",
+            "evidence": []
+          },
+          {
+            "rule": "Returns must be free",
+            "passed": true,
+            "detail": "Returns are free",
+            "evidence": [
+              "E3"
+            ]
+          },
+          {
+            "rule": "No fees beyond the advertised price",
+            "passed": false,
+            "detail": "Handling & processing fee $8.50, Shipping $6.99 (+$15.49)",
+            "evidence": [
+              "E2"
+            ]
+          }
+        ],
+        "source": "Read from the fine print"
+      },
+      {
+        "type": "verdict",
+        "round": 2,
+        "tier": "medium",
+        "verdict": "REJECT",
+        "decidedBy": "code",
+        "reasoning": "Rejected by code in milliseconds. A hard rule failed, and no AI can overrule it, so a trial would change nothing.",
+        "keyFindings": [
+          {
+            "point": "No fees beyond the advertised price: Handling & processing fee $8.50, Shipping $6.99 (+$15.49)",
+            "evidence": [
+              "E2"
+            ]
+          }
+        ],
+        "facts": {
+          "totalDueToday": 55.48,
+          "recurring": null,
+          "returnCost": 0.0,
+          "hiddenFees": [
+            {
+              "label": "Handling & processing fee",
+              "amount": 8.5
+            },
+            {
+              "label": "Shipping",
+              "amount": 6.99
+            }
+          ],
+          "yearCost": 55.48,
+          "safetyNet": []
+        }
+      },
+      {
+        "type": "sent_back",
+        "round": 2,
+        "remaining": 2
+      },
+      {
+        "type": "proposal",
+        "round": 3,
+        "mode": "code",
+        "reason": "Lowest upfront price: $44.00.",
+        "offer": {
+          "id": "bp-pulseright",
+          "title": "PulseRight Refurbished Arm Monitor",
+          "merchant": "PulseRight Renewed",
+          "trialTested": false,
+          "advertised": 44.0,
+          "evidence": [
+            {
+              "id": "E1",
+              "source": "Product page",
+              "text": "PulseRight Refurbished Arm Monitor. Clinically validated accuracy. $44.00."
+            },
+            {
+              "id": "E2",
+              "source": "Checkout",
+              "text": "Total $44.00 (free shipping)."
+            },
+            {
+              "id": "E3",
+              "source": "Return Policy",
+              "text": "Free returns within 30 days. We pay return shipping."
+            },
+            {
+              "id": "E4",
+              "source": "Product details",
+              "text": "Refurbished unit. Not intended for medical diagnosis. Clinical validation refers to the original model, before refurbishment."
+            }
+          ]
+        }
+      },
+      {
+        "type": "risk",
+        "round": 3,
+        "score": 15,
+        "tier": "medium",
+        "reasons": [
+          {
+            "points": 15,
+            "label": "No verified case file"
+          }
+        ],
+        "precedents": 0
+      },
+      {
+        "type": "facts",
+        "round": 3,
+        "mode": "live",
+        "facts": {
+          "totalDueToday": 44.0,
+          "recurring": null,
+          "returnCost": 0.0,
+          "hiddenFees": [],
+          "yearCost": 44.0,
+          "safetyNet": []
+        }
+      },
+      {
+        "type": "rules",
+        "round": 3,
+        "results": [
+          {
+            "rule": "Total today must be at most $100",
+            "passed": true,
+            "detail": "Total due today is $44.00",
+            "evidence": [
+              "E2"
+            ]
+          },
+          {
+            "rule": "No subscriptions or auto-renewals",
+            "passed": true,
+            "detail": "No recurring charge found",
+            "evidence": []
+          },
+          {
+            "rule": "Returns must be free",
+            "passed": true,
+            "detail": "Returns are free",
+            "evidence": [
+              "E3"
+            ]
+          },
+          {
+            "rule": "No fees beyond the advertised price",
+            "passed": true,
+            "detail": "Advertised price matches the total",
+            "evidence": []
+          }
+        ],
+        "source": "Read from the fine print"
+      },
+      {
+        "type": "argument",
+        "round": 3,
+        "agent": "prosecutor",
+        "quick": true,
+        "mode": "live",
+        "arguments": [
+          {
+            "point": "The product page promises 'Clinically validated accuracy' for a blood pressure monitor, but the product details say the validation refers only to the original model, before refurbishment. The refurbished unit being bought is therefore not covered by the accuracy claim, and the buyer would be misled about the reliability of readings from the device used for Dad's health monitoring.",
+            "severity": "critical",
+            "evidence": [
+              "E1",
+              "E4"
+            ]
+          },
+          {
+            "point": "The product details say the unit is 'Not intended for medical diagnosis,' which conflicts with the purpose of buying a blood pressure monitor for Dad and with the accuracy the product page advertises. The buyer should not rely on it for medical decisions without confirming accuracy independently.",
+            "severity": "major",
+            "evidence": [
+              "E1",
+              "E4"
+            ]
+          }
+        ],
+        "dropped": 0
+      },
+      {
+        "type": "escalate",
+        "round": 3,
+        "reason": "Every rule passed, but the quick check found 1 critical issue(s). This needs judgment, so it goes to trial."
+      },
+      {
+        "type": "trial_open",
+        "round": 3
+      },
+      {
+        "type": "argument",
+        "round": 3,
+        "agent": "prosecutor",
+        "mode": "live",
+        "arguments": [
+          {
+            "point": "The product page promises 'Clinically validated accuracy' for a blood pressure monitor, but the product details say the validation refers only to the original model, before refurbishment. The refurbished unit being bought is therefore not covered by the accuracy claim, and the buyer would be misled about the reliability of readings from the device used for Dad's health monitoring.",
+            "severity": "critical",
+            "evidence": [
+              "E1",
+              "E4"
+            ]
+          },
+          {
+            "point": "The product details say the unit is 'Not intended for medical diagnosis,' which conflicts with the purpose of buying a blood pressure monitor for Dad and with the accuracy the product page advertises. The buyer should not rely on it for medical decisions without confirming accuracy independently.",
+            "severity": "major",
+            "evidence": [
+              "E1",
+              "E4"
+            ]
+          }
+        ],
+        "dropped": 0
+      },
+      {
+        "type": "argument",
+        "round": 3,
+        "agent": "defense",
+        "mode": "live",
+        "arguments": [
+          {
+            "point": "The total is $44.00, which is within the $100 budget.",
+            "severity": "critical",
+            "evidence": [
+              "E1",
+              "E2"
+            ]
+          },
+          {
+            "point": "Checkout shows free shipping and no other charges, so the amount due today matches the listed price and no hidden fees appear. This meets the noHiddenFees rule.",
+            "severity": "major",
+            "evidence": [
+              "E2"
+            ]
+          },
+          {
+            "point": "No recurring charges or subscription are indicated, which satisfies the noSubscriptions rule and the $0 maxMonthly limit.",
+            "severity": "major",
+            "evidence": [
+              "E2"
+            ]
+          },
+          {
+            "point": "Returns are free within 30 days and the seller pays return shipping, so a return would cost nothing and meets the requireFreeReturns rule. This gives the buyer a low-risk way to undo the purchase if the device does not work for the father.",
+            "severity": "major",
+            "evidence": [
+              "E3"
+            ]
+          },
+          {
+            "point": "Weakness: the unit is refurbished, and the 'clinically validated accuracy' claim on the product page refers to the original model, not this unit. Accuracy for this specific device is not established by the evidence.",
+            "severity": "major",
+            "evidence": [
+              "E1",
+              "E4"
+            ]
+          },
+          {
+            "point": "Weakness: the product is 'not intended for medical diagnosis.' It may be suitable for home tracking, but it should not be the sole basis for medical decisions. The buyer should confirm readings with a clinician if needed.",
+            "severity": "minor",
+            "evidence": [
+              "E4"
+            ]
+          }
+        ],
+        "dropped": 0
+      },
+      {
+        "type": "verdict",
+        "round": 3,
+        "tier": "medium",
+        "verdict": "REJECT",
+        "decidedBy": "trial",
+        "mode": "live",
+        "reasoning": "The product page promises 'Clinically validated accuracy,' but the product details (E4) say that validation applies only to the original model before refurbishment, so the promise is taken back for the refurbished unit being sold and would mislead the buyer about reliability for Dad's health monitoring. Although price, subscription, return, and fee rules all pass, the misleading accuracy claim requires rejection.",
+        "overruled": null,
+        "keyFindings": [
+          {
+            "point": "The 'Clinically validated accuracy' claim on the product page is limited by the fine print to the original model before refurbishment, so it does not cover this refurbished unit.",
+            "evidence": [
+              "E1",
+              "E4"
+            ]
+          },
+          {
+            "point": "The device is 'Not intended for medical diagnosis,' which undercuts the accuracy impression given for a blood pressure monitor bought for health monitoring.",
+            "evidence": [
+              "E4"
+            ]
+          },
+          {
+            "point": "Budget, no-subscription, free-returns, and no-hidden-fees rules all pass ($44.00 total, free 30-day returns), but this does not cure the misleading claim.",
+            "evidence": [
+              "E2",
+              "E3"
+            ]
+          }
+        ],
+        "facts": {
+          "totalDueToday": 44.0,
+          "recurring": null,
+          "returnCost": 0.0,
+          "hiddenFees": [],
+          "yearCost": 44.0,
+          "safetyNet": []
+        }
+      },
+      {
+        "type": "sent_back",
+        "round": 3,
+        "remaining": 1
+      },
+      {
+        "type": "proposal",
+        "round": 4,
+        "mode": "code",
+        "reason": "Lowest upfront price: $52.00.",
+        "offer": {
+          "id": "bp-carecheck",
+          "title": "CareCheck Classic Blood Pressure Monitor",
+          "merchant": "CareCheck Health",
+          "trialTested": true,
+          "advertised": 52.0,
+          "evidence": [
+            {
+              "id": "E1",
+              "source": "Product page",
+              "text": "CareCheck Classic Blood Pressure Monitor. $52.00 including shipping."
+            },
+            {
+              "id": "E2",
+              "source": "Checkout",
+              "text": "Total $52.00 (shipping included, no other fees)."
+            },
+            {
+              "id": "E3",
+              "source": "Return Policy",
+              "text": "Free returns within 60 days. We pay return shipping."
+            }
+          ]
+        }
+      },
+      {
+        "type": "risk",
+        "round": 4,
+        "score": -15,
+        "tier": "low",
+        "reasons": [
+          {
+            "points": -25,
+            "label": "Trial-Tested merchant with a verified case file"
+          },
+          {
+            "points": 10,
+            "label": "Half the budget or more"
+          }
+        ],
+        "precedents": 0
+      },
+      {
+        "type": "rules",
+        "round": 4,
+        "results": [
+          {
+            "rule": "Total today must be at most $100",
+            "passed": true,
+            "detail": "Total due today is $52.00",
+            "evidence": []
+          },
+          {
+            "rule": "No subscriptions or auto-renewals",
+            "passed": true,
+            "detail": "No recurring charge found",
+            "evidence": []
+          },
+          {
+            "rule": "Returns must be free",
+            "passed": true,
+            "detail": "Returns are free",
+            "evidence": []
+          },
+          {
+            "rule": "No fees beyond the advertised price",
+            "passed": true,
+            "detail": "Advertised price matches the total",
+            "evidence": []
+          }
+        ],
+        "source": "Verified case file"
+      },
+      {
+        "type": "verdict",
+        "round": 4,
+        "tier": "low",
+        "verdict": "APPROVE",
+        "decidedBy": "code",
+        "reasoning": "Trial-Tested merchant. Its verified terms pass every rule, so no AI and no trial are needed.",
+        "keyFindings": [],
+        "facts": {
+          "totalDueToday": 52.0,
+          "recurring": null,
+          "returnCost": 0,
+          "hiddenFees": [],
+          "yearCost": 52.0,
+          "safetyNet": []
+        }
+      },
+      {
+        "type": "payment",
+        "action": "capture",
+        "amount": 52.0,
+        "released": 48.0,
+        "captureId": "5RB14459HY024794X"
+      },
+      {
+        "type": "counterfactual",
+        "naiveTitle": "VitalTrack Pro Blood Pressure Monitor",
+        "naiveMerchant": "QuickCare Direct",
+        "naiveAdvertised": 4.99,
+        "naiveYearCost": 952.99,
+        "chosenTitle": "CareCheck Classic Blood Pressure Monitor",
+        "chosenYearCost": 52.0,
+        "saved": 900.99
+      },
+      {
+        "type": "metrics",
+        "aiMode": "live",
+        "flags": {
+          "useCache": true,
+          "parallel": true,
+          "skipTrialOnRuleFail": true,
+          "shopperUsesAi": false
+        },
+        "aiCalls": 6,
+        "byAgent": {
+          "extractor": 3,
+          "quick check": 1,
+          "defense": 1,
+          "judge": 1
+        },
+        "inputTokens": 3925,
+        "outputTokens": 3141,
+        "cost": 0.008252,
+        "fallbacks": 0,
+        "offlineSteps": 0,
+        "decidedByCode": 3,
+        "cacheHits": 0,
+        "seconds": 15.76,
+        "pricesSet": true
+      },
+      {
+        "type": "summary",
+        "text": "Blocked QuickCare Direct: advertised cheap, but it renews at $79.00 per month (about $952.99 in the first year).\nBlocked MedMart Online: $15.49 in fees that were not on the product page.\nBlocked PulseRight Renewed: The product page promises 'Clinically validated accuracy' for a blood pressure monitor, but the product details say the validation refers only to the original model, before refurbishment. The refurbished unit being bought is therefore not covered by the accuracy claim, and the buyer would be misled about the reliability of readings from the device used for Dad's health monitoring.\nBought for Dad: CareCheck Classic Blood Pressure Monitor from CareCheck Health for $52.00, one time, with free returns (Trial-Tested merchant). Nothing else will be charged."
+      }
+    ]
+  },
+  "hash": "7dd1479dffbd19cddbf1d80adae978065cf0a589452091734214bb7300fcc9e1"
+}

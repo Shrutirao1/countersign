@@ -88,7 +88,7 @@ No keys: PayPal is simulated and the agents run offline. Set `AI_MODE=mock` to s
 
 ## Proof
 
-See `docs/proof/`: receipts from live sandbox runs, PayPal's records of the same IDs, and both smoke tests.
+See `docs/proof/`: receipts from live sandbox runs, and both smoke tests.
 
 ## License
 
