@@ -7,7 +7,7 @@
     "fast": "claude-haiku-5-5",
     "judge": "claude-sonnet-5-5"
   },
-  "createdAt": "2026-11-12T15:00:16.397238+00:00",
+  "createdAt": "2026-11-12T15:23:05.252379+00:00",
   "summary": {
     "offers": 20,
     "runs": 20,
@@ -18,11 +18,11 @@
     "droppedCitations": 0,
     "aiCalls": 38,
     "fallbackRate": 0.0,
-    "medianSeconds": 3.5045,
-    "p95Seconds": 10.153,
+    "medianSeconds": 3.4285,
+    "p95Seconds": 11.569,
     "avgAiCalls": 1.9,
-    "avgCost": 0.001609,
-    "avgInputTokens": 941.65,
+    "avgCost": 0.00161315,
+    "avgInputTokens": 987.7,
     "consistency": null,
     "byGroup": {
       "clean": {
@@ -77,7 +77,7 @@
       },
       {
         "metric": "Median seconds",
-        "value": 3.505,
+        "value": 3.429,
         "bar": "under 10 s",
         "passed": true
       },
@@ -113,12 +113,12 @@
         "returnCost": 0.0,
         "hiddenFees": 0.0
       },
-      "seconds": 4.558,
+      "seconds": 6.741,
       "aiCalls": 2,
       "fallbacks": 0,
-      "inputTokens": 824,
-      "outputTokens": 658,
-      "cost": 0.000411,
+      "inputTokens": 904,
+      "outputTokens": 809,
+      "cost": 0.000495,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Honest one-time price, free returns"
@@ -145,12 +145,12 @@
         "returnCost": 0.0,
         "hiddenFees": 0.0
       },
-      "seconds": 4.023,
+      "seconds": 6.863,
       "aiCalls": 2,
       "fallbacks": 0,
-      "inputTokens": 850,
-      "outputTokens": 556,
-      "cost": 0.000363,
+      "inputTokens": 930,
+      "outputTokens": 671,
+      "cost": 0.000428,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Free shipping, total matches"
@@ -177,12 +177,12 @@
         "returnCost": 0.0,
         "hiddenFees": 0.0
       },
-      "seconds": 4.527,
+      "seconds": 4.134,
       "aiCalls": 2,
       "fallbacks": 0,
-      "inputTokens": 837,
-      "outputTokens": 629,
-      "cost": 0.000398,
+      "inputTokens": 917,
+      "outputTokens": 525,
+      "cost": 0.000354,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Honest one-time price"
@@ -209,12 +209,12 @@
         "returnCost": 0.0,
         "hiddenFees": 0.0
       },
-      "seconds": 4.062,
+      "seconds": 4.24,
       "aiCalls": 2,
       "fallbacks": 0,
-      "inputTokens": 834,
-      "outputTokens": 538,
-      "cost": 0.000352,
+      "inputTokens": 914,
+      "outputTokens": 678,
+      "cost": 0.00043,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Returns are free, worded differently"
@@ -241,12 +241,12 @@
         "returnCost": 0.0,
         "hiddenFees": 0.0
       },
-      "seconds": 3.617,
+      "seconds": 6.637,
       "aiCalls": 2,
       "fallbacks": 0,
-      "inputTokens": 879,
-      "outputTokens": 554,
-      "cost": 0.000365,
+      "inputTokens": 959,
+      "outputTokens": 776,
+      "cost": 0.000484,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Accessories sold separately is not a hidden charge"
@@ -276,12 +276,12 @@
         "returnCost": 0.0,
         "hiddenFees": 0.0
       },
-      "seconds": 2.906,
+      "seconds": 2.225,
       "aiCalls": 1,
       "fallbacks": 0,
       "inputTokens": 371,
-      "outputTokens": 580,
-      "cost": 0.000327,
+      "outputTokens": 412,
+      "cost": 0.000243,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Billed monthly after a trial"
@@ -311,12 +311,12 @@
         "returnCost": 0.0,
         "hiddenFees": 12.0
       },
-      "seconds": 3.813,
+      "seconds": 3.373,
       "aiCalls": 1,
       "fallbacks": 0,
       "inputTokens": 366,
-      "outputTokens": 682,
-      "cost": 0.000378,
+      "outputTokens": 607,
+      "cost": 0.00034,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Auto-renewing coaching plan"
@@ -334,9 +334,9 @@
         "total": true,
         "recurring": true,
         "returnCost": true,
-        "hiddenFees": false
+        "hiddenFees": true
       },
-      "fieldsCorrect": 3,
+      "fieldsCorrect": 4,
       "found": {
         "totalDueToday": 29.99,
         "recurring": {
@@ -344,14 +344,14 @@
           "interval": "year"
         },
         "returnCost": 0.0,
-        "hiddenFees": 99.0
+        "hiddenFees": 0.0
       },
-      "seconds": 2.909,
+      "seconds": 2.33,
       "aiCalls": 1,
       "fallbacks": 0,
       "inputTokens": 369,
-      "outputTokens": 560,
-      "cost": 0.000317,
+      "outputTokens": 436,
+      "cost": 0.000255,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Yearly auto-renewal"
@@ -381,12 +381,12 @@
         "returnCost": 0.0,
         "hiddenFees": 18.5
       },
-      "seconds": 2.891,
+      "seconds": 2.8,
       "aiCalls": 1,
       "fallbacks": 0,
       "inputTokens": 359,
-      "outputTokens": 471,
-      "cost": 0.000271,
+      "outputTokens": 551,
+      "cost": 0.000311,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Automatic monthly refills"
@@ -413,12 +413,12 @@
         "returnCost": 0.0,
         "hiddenFees": 15.0
       },
-      "seconds": 1.716,
+      "seconds": 1.918,
       "aiCalls": 1,
       "fallbacks": 0,
       "inputTokens": 346,
-      "outputTokens": 282,
-      "cost": 0.000176,
+      "outputTokens": 286,
+      "cost": 0.000178,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Assembly fee added at checkout"
@@ -445,12 +445,12 @@
         "returnCost": 0.0,
         "hiddenFees": 9.95
       },
-      "seconds": 1.571,
+      "seconds": 1.471,
       "aiCalls": 1,
       "fallbacks": 0,
       "inputTokens": 349,
-      "outputTokens": 231,
-      "cost": 0.00015,
+      "outputTokens": 251,
+      "cost": 0.00016,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Shipping and handling added at checkout"
@@ -477,12 +477,12 @@
         "returnCost": 0.0,
         "hiddenFees": 4.99
       },
-      "seconds": 1.691,
+      "seconds": 1.702,
       "aiCalls": 1,
       "fallbacks": 0,
       "inputTokens": 348,
-      "outputTokens": 250,
-      "cost": 0.00016,
+      "outputTokens": 271,
+      "cost": 0.00017,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Small-order fee"
@@ -500,21 +500,21 @@
         "total": true,
         "recurring": true,
         "returnCost": true,
-        "hiddenFees": true
+        "hiddenFees": false
       },
-      "fieldsCorrect": 4,
+      "fieldsCorrect": 3,
       "found": {
         "totalDueToday": 89.0,
         "recurring": null,
         "returnCost": 26.8,
-        "hiddenFees": 0.0
+        "hiddenFees": 26.8
       },
-      "seconds": 3.392,
+      "seconds": 2.938,
       "aiCalls": 1,
       "fallbacks": 0,
       "inputTokens": 361,
-      "outputTokens": 596,
-      "cost": 0.000334,
+      "outputTokens": 575,
+      "cost": 0.000324,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "'Free returns' but $26.80 to return"
@@ -541,12 +541,12 @@
         "returnCost": 14.25,
         "hiddenFees": 0.0
       },
-      "seconds": 3.132,
+      "seconds": 3.226,
       "aiCalls": 1,
       "fallbacks": 0,
       "inputTokens": 352,
-      "outputTokens": 556,
-      "cost": 0.000313,
+      "outputTokens": 660,
+      "cost": 0.000365,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "15% restocking fee"
@@ -573,12 +573,12 @@
         "returnCost": 11.95,
         "hiddenFees": 0.0
       },
-      "seconds": 2.193,
+      "seconds": 3.484,
       "aiCalls": 1,
       "fallbacks": 0,
       "inputTokens": 346,
-      "outputTokens": 394,
-      "cost": 0.000232,
+      "outputTokens": 612,
+      "cost": 0.000341,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Return label deducted from refund"
@@ -605,12 +605,12 @@
         "returnCost": 0.0,
         "hiddenFees": 0.0
       },
-      "seconds": 11.059,
+      "seconds": 11.569,
       "aiCalls": 4,
       "fallbacks": 0,
-      "inputTokens": 2525,
-      "outputTokens": 1614,
-      "cost": 0.006526,
+      "inputTokens": 2620,
+      "outputTokens": 1789,
+      "cost": 0.006604,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "'Medical-grade' claim taken back in the fine print"
@@ -637,12 +637,12 @@
         "returnCost": 0.0,
         "hiddenFees": 0.0
       },
-      "seconds": 9.933,
+      "seconds": 14.846,
       "aiCalls": 4,
       "fallbacks": 0,
-      "inputTokens": 2360,
-      "outputTokens": 1236,
-      "cost": 0.005754,
+      "inputTokens": 2646,
+      "outputTokens": 1859,
+      "cost": 0.006581,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "'Lifetime warranty' is really 90 days"
@@ -669,12 +669,12 @@
         "returnCost": 0.0,
         "hiddenFees": 0.0
       },
-      "seconds": 3.079,
+      "seconds": 3.206,
       "aiCalls": 2,
       "fallbacks": 0,
-      "inputTokens": 861,
-      "outputTokens": 366,
-      "cost": 0.000269,
+      "inputTokens": 941,
+      "outputTokens": 393,
+      "cost": 0.000291,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Claim is backed up, not taken back"
@@ -701,12 +701,12 @@
         "returnCost": 0.0,
         "hiddenFees": 0.0
       },
-      "seconds": 9.209,
+      "seconds": 8.017,
       "aiCalls": 4,
       "fallbacks": 0,
-      "inputTokens": 2513,
-      "outputTokens": 1980,
-      "cost": 0.00726,
+      "inputTokens": 2473,
+      "outputTokens": 1684,
+      "cost": 0.00671,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Says 'subscription' but there is none"
@@ -733,12 +733,12 @@
         "returnCost": 0.0,
         "hiddenFees": 0.0
       },
-      "seconds": 10.153,
+      "seconds": 9.529,
       "aiCalls": 4,
       "fallbacks": 0,
-      "inputTokens": 2783,
-      "outputTokens": 2362,
-      "cost": 0.007824,
+      "inputTokens": 2883,
+      "outputTokens": 2384,
+      "cost": 0.007199,
       "droppedCitations": 0,
       "safetyNet": [],
       "reason": "Optional plan, never added automatically"

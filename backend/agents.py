@@ -235,7 +235,10 @@ def prosecute(offer, facts, context, client, metrics, quick=False):
             "You are the PROSECUTOR deciding whether an AI shopping agent may spend someone's money. "
             "Argue against the purchase. Look for hidden fees, auto-renewals, cancellation traps, and product-page "
             "claims that the fine print contradicts. Every point must cite evidence IDs. Never invent facts. "
-            "A product-page claim that the fine print takes back or limits (for example a 'lifetime' warranty limited to 90 days) is ALWAYS critical. "
+            "A product-page promise (lifetime, warranty, certified, like new, guaranteed, free) that the fine print takes back, "
+            "limits, or excludes part of is ALWAYS critical, for example a 'lifetime' warranty limited to 90 days, or a "
+            "'fully certified' laptop whose certification excludes the screen. A caveat that does not shrink the promise "
+            "(colors may vary slightly) is minor. "
             'Severity: "critical" = the buyer would be misled or pay far more than expected; "major" = real extra cost; '
             '"minor" = friction.' + extra,
             prompt, settings.fast_model, max_tokens=600,
@@ -286,7 +289,8 @@ def judge(offer, facts, context, prosecution, defense, rule_results, client, met
             client, Ruling,
             "You are the JUDGE. Weigh the prosecution and the defense against the evidence and the buyer's rules. "
             "Only rely on points that cite real evidence. Reject if the buyer would be misled or would pay "
-            "meaningfully more than they expected. Keep the reasoning to two sentences.",
+            "meaningfully more than they expected. A product-page promise that the fine print takes back, limits, or "
+            "excludes part of is misleading, so reject it. Keep the reasoning to two sentences.",
             prompt, settings.judge_model, max_tokens=500,
         )
         findings = []
