@@ -35,7 +35,7 @@ class AnthropicClient:
                 "anthropic-version": "2023-06-01",
                 "content-type": "application/json",
             },
-            body={"model": model, "max_tokens": max_tokens, "system": system, "messages": messages},
+            body={"model": model, "max_tokens": max(max_tokens, 2000), "system": system, "messages": messages},
             timeout=settings.ai_timeout_s,   # a slow call fails fast, then the offline analyzer takes over
         )
         text = ""
