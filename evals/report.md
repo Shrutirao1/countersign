@@ -17,14 +17,14 @@ Bar to ship: 0 traps approved on the test split, 2 or fewer good offers blocked,
 
 ## Before and after the speed and cost changes
 
-AI mode: mock. Mock AI: every call waits 0.4 s, so seconds show the effect of running calls in parallel. Real seconds come from --live.
+AI mode: live. Real AI calls.
 
 | Scenario | Run | Old design: AI calls | Old design: seconds | New design: AI calls | New design: seconds |
 | --- | --- | --- | --- | --- | --- |
-| Dad's blood pressure monitor | first run | 14 | 5.66 | 6 | 1.62 |
-| Dad's blood pressure monitor | repeat run | 14 | 5.66 | 3 | 1.22 |
-| Reorder AA batteries | first run | 1 | 0.41 | 0 | 0.00 |
-| Reorder AA batteries | repeat run | 1 | 0.41 | 0 | 0.00 |
-| Cheap dinner delivery | first run | 10 | 4.03 | 2 | 0.41 |
-| Cheap dinner delivery | repeat run | 10 | 4.04 | 0 | 0.00 |
+| Dad's blood pressure monitor | first run | 14 | 46.20 | 6 | 19.92 |
+| Dad's blood pressure monitor | repeat run | 14 | 45.59 | 3 | 13.11 |
+| Reorder AA batteries | first run | 1 | 3.31 | 0 | 0.00 |
+| Reorder AA batteries | repeat run | 1 | 1.96 | 0 | 0.00 |
+| Cheap dinner delivery | first run | 10 | 32.29 | 2 | 2.96 |
+| Cheap dinner delivery | repeat run | 10 | 27.04 | 0 | 0.00 |
 
